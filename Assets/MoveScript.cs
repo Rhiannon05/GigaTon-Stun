@@ -14,9 +14,13 @@ public class MoveScript : MonoBehaviour
     private Rigidbody2D _rb;
 
 
+    [SerializeField] private float _playerHorizontal;
+    [SerializeField] private float _playerVertical;
+    
+
     private bool _isAttacking = false;
-    
-    
+
+    [SerializeField] private int _playerNumber;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,8 +43,11 @@ public class MoveScript : MonoBehaviour
         if (_isAttacking) return; 
         
          _anim.SetBool("Walking", _walking);
-                
-         if (Input.GetKey(KeyCode.D))
+
+
+         _playerHorizontal = Input.GetAxis("Horizontal " + _playerNumber);
+         
+         if (_playerHorizontal > 0)
          {
              //Forward
              _walking = true;
@@ -48,7 +55,7 @@ public class MoveScript : MonoBehaviour
                     
              _rb.velocity = new Vector2(_playerSpeed, 0);
          } 
-         else if (Input.GetKey(KeyCode.A))
+         else if (_playerHorizontal <  0)
          { 
              _walking = true;
         
@@ -73,13 +80,13 @@ public class MoveScript : MonoBehaviour
     {
         _anim.SetBool("isAttacking", _isAttacking);
         
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetButtonDown("Light " + _playerNumber))
         {
               _anim.SetTrigger("LightAttack");
               
         }
 
-        if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetButtonDown("Medium " + _playerNumber))
         {
             _anim.SetTrigger("MediumAttack");
         }
