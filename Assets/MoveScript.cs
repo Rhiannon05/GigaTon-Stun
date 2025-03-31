@@ -12,7 +12,15 @@ public class MoveScript : MonoBehaviour
     [SerializeField] private float _playerSpeed;
 
     private Rigidbody2D _rb;
+
+
+    [SerializeField] private float _playerHorizontal;
+    [SerializeField] private float _playerVertical;
     
+
+    private bool _isAttacking = false;
+
+    [SerializeField] private int _playerNumber;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,30 +33,73 @@ public class MoveScript : MonoBehaviour
     void Update()
     {
 
-        _anim.SetBool("Walking", _walking);
+       Movement();
+       Attacking();
+       
+    }
+
+    private void Movement()
+    {
+        if (_isAttacking) return; 
         
-        if (Input.GetKey(KeyCode.D))
-        {
-            //Forward 
-            _walking = true;
-            
-            _playerSprite.flipX = false;
-            
-            _rb.velocity = new Vector2(_playerSpeed, 0);
-        } 
-        else if (Input.GetKey(KeyCode.A))
-        {
-            _walking = true;
+         _anim.SetBool("Walking", _walking);
 
-            _playerSprite.flipX = true;
 
-            _rb.velocity = new Vector2(-_playerSpeed, 0);
-        }
-        else
+         _playerHorizontal = Input.GetAxis("Horizontal " + _playerNumber);
+         
+         if (_playerHorizontal > 0)
+         {
+             //Forward
+             _walking = true;
+             _playerSprite.flipX = false;
+                    
+             _rb.velocity = new Vector2(_playerSpeed, 0);
+         } 
+         else if (_playerHorizontal <  0)
+         { 
+             _walking = true;
+        
+             _playerSprite.flipX = true;
+        
+             _rb.velocity = new Vector2(-_playerSpeed, 0);
+         }
+         else
+         { 
+             _walking = false;
+                    
+             StopMovement();
+         }
+    }
+
+    private void StopMovement()
+    {
+        _rb.velocity = new Vector2(0, 0);
+    }
+    
+    private void Attacking()
+    {
+        _anim.SetBool("isAttacking", _isAttacking);
+        
+        if (Input.GetButtonDown("Light " + _playerNumber))
         {
-            _walking = false;
-            
-            _rb.velocity = new Vector2(0, 0);
+              _anim.SetTrigger("LightAttack");
+              
         }
+
+        if (Input.GetButtonDown("Medium " + _playerNumber))
+        {
+            _anim.SetTrigger("MediumAttack");
+        }
+    }
+
+    public void AttackEnded()
+    {
+        _isAttacking = false;
+    }
+
+    public void AttackStarted()
+    {
+        StopMovement();
+        _isAttacking = true;
     }
 }
