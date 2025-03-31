@@ -12,6 +12,10 @@ public class MoveScript : MonoBehaviour
     [SerializeField] private float _playerSpeed;
 
     private Rigidbody2D _rb;
+
+
+    private bool _isAttacking = false;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -25,30 +29,70 @@ public class MoveScript : MonoBehaviour
     void Update()
     {
 
-        _anim.SetBool("Walking", _walking);
+       Movement();
+       Attacking();
+       
+    }
+
+    private void Movement()
+    {
+        if (_isAttacking) return; 
         
-        if (Input.GetKey(KeyCode.D))
-        {
-            //Forward 
-            _walking = true;
-            
-            _playerSprite.flipX = false;
-            
-            _rb.velocity = new Vector2(_playerSpeed, 0);
-        } 
-        else if (Input.GetKey(KeyCode.A))
-        {
-            _walking = true;
+         _anim.SetBool("Walking", _walking);
+                
+         if (Input.GetKey(KeyCode.D))
+         {
+             //Forward
+             _walking = true;
+             _playerSprite.flipX = false;
+                    
+             _rb.velocity = new Vector2(_playerSpeed, 0);
+         } 
+         else if (Input.GetKey(KeyCode.A))
+         { 
+             _walking = true;
+        
+             _playerSprite.flipX = true;
+        
+             _rb.velocity = new Vector2(-_playerSpeed, 0);
+         }
+         else
+         { 
+             _walking = false;
+                    
+             StopMovement();
+         }
+    }
 
-            _playerSprite.flipX = true;
-
-            _rb.velocity = new Vector2(-_playerSpeed, 0);
-        }
-        else
+    private void StopMovement()
+    {
+        _rb.velocity = new Vector2(0, 0);
+    }
+    
+    private void Attacking()
+    {
+        _anim.SetBool("isAttacking", _isAttacking);
+        
+        if (Input.GetKeyDown(KeyCode.I))
         {
-            _walking = false;
-            
-            _rb.velocity = new Vector2(0, 0);
+              _anim.SetTrigger("LightAttack");
+              
         }
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            _anim.SetTrigger("MediumAttack");
+        }
+    }
+
+    public void AttackEnded()
+    {
+        _isAttacking = false;
+    }
+
+    public void AttackStarted()
+    {
+        StopMovement();
+        _isAttacking = true;
     }
 }
