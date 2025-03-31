@@ -21,6 +21,10 @@ public class MoveScript : MonoBehaviour
     private bool _isAttacking = false;
 
     [SerializeField] private int _playerNumber;
+
+
+    [SerializeField] private GameObject _otherPlayer;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +39,29 @@ public class MoveScript : MonoBehaviour
 
        Movement();
        Attacking();
-       
+
+       ManageOrientation();
+
+
+    }
+
+
+    private void ManageOrientation()
+    {
+        var pos = _otherPlayer.transform.position;
+
+        if (pos.x > transform.position.x)
+        {
+            //Other player is to the left
+
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+        else
+        {
+            //other player is to the right
+            
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
     }
 
     private void Movement()
@@ -44,14 +70,21 @@ public class MoveScript : MonoBehaviour
         
          _anim.SetBool("Walking", _walking);
 
-
-         _playerHorizontal = Input.GetAxis("Horizontal " + _playerNumber);
+         if (_playerNumber == 1)
+         {
+             _playerHorizontal = Input.GetAxisRaw("Horizontal " + _playerNumber);
+         }
+         else
+         {
+             _playerHorizontal = Input.GetAxis("Horizontal " + _playerNumber);
+         }
+         
          
          if (_playerHorizontal > 0)
          {
              //Forward
              _walking = true;
-             _playerSprite.flipX = false;
+             //_playerSprite.flipX = false;
                     
              _rb.velocity = new Vector2(_playerSpeed, 0);
          } 
@@ -59,7 +92,7 @@ public class MoveScript : MonoBehaviour
          { 
              _walking = true;
         
-             _playerSprite.flipX = true;
+             //_playerSprite.flipX = true;
         
              _rb.velocity = new Vector2(-_playerSpeed, 0);
          }
@@ -89,6 +122,11 @@ public class MoveScript : MonoBehaviour
         if (Input.GetButtonDown("Medium " + _playerNumber))
         {
             _anim.SetTrigger("MediumAttack");
+        }
+        
+        if (Input.GetButtonDown("Heavy " + _playerNumber))
+        {
+            _anim.SetTrigger("HeavyAttack");
         }
     }
 
