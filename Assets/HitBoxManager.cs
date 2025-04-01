@@ -9,6 +9,7 @@ public class HitBoxManager : MonoBehaviour
 
     private BoxCollider2D _hitBox;
     private MoveScript _move;
+    private PushManagement _push; 
     private float damageDealt;
     private float stunDuration;
     
@@ -17,6 +18,7 @@ public class HitBoxManager : MonoBehaviour
     {
         _hitBox = GetComponent<BoxCollider2D>();
         _move = GetComponentInParent<MoveScript>();
+        _push = GetComponentInParent<PushManagement>();
     }
 
     // Update is called once per frame
@@ -53,6 +55,8 @@ public class HitBoxManager : MonoBehaviour
             
             
             _hitOpp.TakeDamage(damageDealt, stunDuration);
+            
+            _push.Pushback(5);
         }
     }
 }

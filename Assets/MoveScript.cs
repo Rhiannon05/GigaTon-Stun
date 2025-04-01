@@ -18,7 +18,7 @@ public class MoveScript : MonoBehaviour
     [SerializeField] private float _playerVertical;
     
 
-    private bool _isAttacking = false;
+    public bool _isAttacking = false;
 
     [SerializeField] private int _playerNumber;
 

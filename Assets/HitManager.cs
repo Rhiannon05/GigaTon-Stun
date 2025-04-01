@@ -7,10 +7,11 @@ public class HitManager : MonoBehaviour
 {
     [SerializeField] private float _health;
     private Animator _anim;
+    private PushManagement _push;
 
-    
-    
-    
+
+
+    private MoveScript _move;
 
     private float stunTime;
     public bool isStunned; 
@@ -18,6 +19,8 @@ public class HitManager : MonoBehaviour
     private void Start()
     {
         _anim = GetComponentInChildren<Animator>();
+        _push = GetComponent<PushManagement>();
+        _move = GetComponent<MoveScript>();
     }
 
     public void TakeDamage(float damage, float stunTimeR)
@@ -29,6 +32,8 @@ public class HitManager : MonoBehaviour
         }
         //flash white
         
+        _push.Pushback(5);
+        _move._isAttacking = false;
     }
 
     private void Update()
