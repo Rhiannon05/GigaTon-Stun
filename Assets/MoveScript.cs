@@ -22,15 +22,29 @@ public class MoveScript : MonoBehaviour
 
     [SerializeField] private int _playerNumber;
 
+    public int _opponentNumber;
+
 
     [SerializeField] private GameObject _otherPlayer;
+
+
+    private HitManager _hit;
     
     // Start is called before the first frame update
     void Start()
     {
         _anim = GetComponentInChildren<Animator>();
         _walking = true;
-        _rb = GetComponent<Rigidbody2D>(); 
+        _rb = GetComponent<Rigidbody2D>();
+        _hit = GetComponent<HitManager>();
+        
+        if (_playerNumber == 1)
+        {
+            _opponentNumber = 2;
+        } else if (_playerNumber == 2)
+        {
+            _opponentNumber = 1;
+        }
     }
 
     // Update is called once per frame
