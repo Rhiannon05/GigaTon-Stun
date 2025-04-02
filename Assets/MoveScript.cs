@@ -11,6 +11,7 @@ public class MoveScript : MonoBehaviour
     private Rigidbody2D _rb;
     [SerializeField] private GameObject _otherPlayer;
     private HitManager _hit;
+    private HitBoxManager _hitBox;
     
     
     
@@ -25,9 +26,9 @@ public class MoveScript : MonoBehaviour
     public bool _isAttacking = false;
 
     [Header("Attack Info")] public bool canInput;
-    private int attackStrength;
-    private bool inputBuffer = false;
-    private bool hitConfirm = false;
+    [SerializeField] private int attackStrength;
+    [SerializeField] private bool inputBuffer = false;
+    [SerializeField] private bool hitConfirm = false;
     
     [Header("PlayerData")]
     [SerializeField] private int _playerNumber;
@@ -41,6 +42,7 @@ public class MoveScript : MonoBehaviour
         _walking = true;
         _rb = GetComponent<Rigidbody2D>();
         _hit = GetComponent<HitManager>();
+        _hitBox = GetComponentInChildren<HitBoxManager>();
         
         if (_playerNumber == 1)
         {
@@ -190,6 +192,10 @@ public class MoveScript : MonoBehaviour
         
         if (Input.GetButtonDown("Light " + _playerNumber))
         {
+
+              
+            
+              _hitBox.DisableHitbox();
               _anim.SetTrigger("LightAttack");
               attackStrength = 1;
               canInput = false;
@@ -198,6 +204,13 @@ public class MoveScript : MonoBehaviour
 
         if (Input.GetButtonDown("Medium " + _playerNumber))
         {
+            if (hitConfirm && attackStrength < 2)
+            {
+                canInput = true;
+                _anim.SetBool("CanInput", canInput);
+            }
+            
+            _hitBox.DisableHitbox();
             _anim.SetTrigger("MediumAttack");
             attackStrength = 2;
             canInput = false;
@@ -206,6 +219,13 @@ public class MoveScript : MonoBehaviour
         
         if (Input.GetButtonDown("Heavy " + _playerNumber))
         {
+            if (hitConfirm && attackStrength < 3)
+            {
+                canInput = true;
+                _anim.SetBool("CanInput", canInput);
+            }
+            
+            _hitBox.DisableHitbox();
             _anim.SetTrigger("HeavyAttack");
             attackStrength = 3;
             canInput = false;
@@ -238,6 +258,5 @@ public class MoveScript : MonoBehaviour
     {
         hitConfirm = true;
         inputBuffer = true;
-        canInput = true; 
     }
 }
