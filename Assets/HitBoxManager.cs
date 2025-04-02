@@ -12,6 +12,8 @@ public class HitBoxManager : MonoBehaviour
     private PushManagement _push; 
     private float damageDealt;
     private float stunDuration;
+
+    private float pushback = 0;
     
     // Start is called before the first frame update
     void Start()
@@ -32,7 +34,28 @@ public class HitBoxManager : MonoBehaviour
         _hitBox.offset = new Vector2(1.4f, 1.1f);
         _hitBox.size = new Vector2(6.1f, 3.6f);
         damageDealt = 5;
-        stunDuration = 0.75f;
+        stunDuration = 0.65f;
+        pushback = 5;
+        ActivateHitbox();
+    }
+
+    public void MediumPunch()
+    {
+        _hitBox.offset = new Vector2(0f, 0.9f);
+        _hitBox.size = new Vector2(10.5f, 9.1f);
+        damageDealt = 99;
+        stunDuration = 0.85f;
+        pushback = 22;
+        ActivateHitbox();
+    }
+
+    public void OBLITERATIONKICK()
+    {
+        _hitBox.offset = new Vector2(4.6f, 0f);
+        _hitBox.size = new Vector2(8.6f, 2.9f);
+        damageDealt = 10;
+        stunDuration = 1.3f;
+        pushback = 45;
         ActivateHitbox();
     }
     
@@ -53,10 +76,13 @@ public class HitBoxManager : MonoBehaviour
         {
             HitManager _hitOpp = other.gameObject.GetComponent<HitManager>(); 
             
+            _move.HitCOnfirmable();
             
-            _hitOpp.TakeDamage(damageDealt, stunDuration);
+            _hitOpp.TakeDamage(damageDealt, stunDuration, pushback);
             
-            _push.Pushback(5);
+            //This one works
+            _push.Pushback(pushback);
+            
         }
     }
 }

@@ -23,7 +23,7 @@ public class HitManager : MonoBehaviour
         _move = GetComponent<MoveScript>();
     }
 
-    public void TakeDamage(float damage, float stunTimeR)
+    public void TakeDamage(float damage, float stunTimeR, float pushed)
     {
         _health -= damage;
         if (stunTime < stunTimeR)
@@ -32,7 +32,11 @@ public class HitManager : MonoBehaviour
         }
         //flash white
         
-        _push.Pushback(5);
+        
+        
+        //This one hates me 
+        _push.Pushback(pushed);
+        
         _move._isAttacking = false;
     }
 

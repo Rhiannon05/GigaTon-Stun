@@ -22,4 +22,9 @@ public class AnimationEventReferencer : MonoBehaviour
     {
         _move.AttackStarted();
     }
+
+    public void Buff()
+    {
+        _move.Buffer();
+    }
 }

@@ -5,30 +5,34 @@ using UnityEngine;
 
 public class MoveScript : MonoBehaviour
 {
-
+    [Header("References")]
     [SerializeField] private SpriteRenderer _playerSprite;
     private Animator _anim;
-    private bool _walking = false;
-    [SerializeField] private float _playerSpeed;
-
     private Rigidbody2D _rb;
-
-
+    [SerializeField] private GameObject _otherPlayer;
+    private HitManager _hit;
+    
+    
+    
+    [Header("Walking ")]
+    private bool _walking = false;
+    private bool _backWalking = false;
+    [SerializeField] private float _playerSpeed;
+    
+    [Header("Input")]
     [SerializeField] private float _playerHorizontal;
     [SerializeField] private float _playerVertical;
-    
-
     public bool _isAttacking = false;
 
+    [Header("Attack Info")] public bool canInput;
+    private int attackStrength;
+    private bool inputBuffer = false;
+    private bool hitConfirm = false;
+    
+    [Header("PlayerData")]
     [SerializeField] private int _playerNumber;
-
     public int _opponentNumber;
-
-
-    [SerializeField] private GameObject _otherPlayer;
-
-
-    private HitManager _hit;
+    public bool _otherPlayerIsToTheRight; 
     
     // Start is called before the first frame update
     void Start()
@@ -55,10 +59,24 @@ public class MoveScript : MonoBehaviour
        Attacking();
 
        ManageOrientation();
-
+       GetOpponentPosition();
 
     }
 
+    private void GetOpponentPosition()
+    {
+        if (_otherPlayer.gameObject.transform.position.x > transform.position.x)
+        {
+            //Other player is to the right
+            _otherPlayerIsToTheRight = true;
+        }
+        else
+        {
+            _otherPlayerIsToTheRight = false; 
+            
+        }
+    }
+    
 
     private void ManageOrientation()
     {
@@ -80,10 +98,14 @@ public class MoveScript : MonoBehaviour
 
     private void Movement()
     {
-        if (_isAttacking) return; 
+        _anim.SetBool("Walking", _walking);
+        _anim.SetBool("BackWalk", _backWalking);
         
-         _anim.SetBool("Walking", _walking);
-
+        if (_isAttacking || _hit.isStunned)
+        {
+            return;
+        }
+        
          if (_playerNumber == 1)
          {
              _playerHorizontal = Input.GetAxisRaw("Horizontal " + _playerNumber);
@@ -96,8 +118,22 @@ public class MoveScript : MonoBehaviour
          
          if (_playerHorizontal > 0)
          {
-             //Forward
-             _walking = true;
+             //Right
+
+
+
+             if (_otherPlayerIsToTheRight)
+             {
+                 _walking = true;
+                 _backWalking = false;
+             }
+             else
+             {
+                 _backWalking = true;
+                 _walking = false;
+             }
+             
+             
              //_playerSprite.flipX = false;
                     
              _rb.velocity = new Vector2(_playerSpeed, 0);
@@ -108,50 +144,100 @@ public class MoveScript : MonoBehaviour
         
              //_playerSprite.flipX = true;
         
+             if (!_otherPlayerIsToTheRight)
+             {
+                 _walking = true;
+                 _backWalking = false;
+             }
+             else
+             {
+                 _backWalking = true;
+                 _walking = false;
+             }
+             
+             
+             
+             
              _rb.velocity = new Vector2(-_playerSpeed, 0);
          }
          else
          { 
              _walking = false;
-                    
+             _backWalking = false;       
+             
              StopMovement();
          }
     }
 
     private void StopMovement()
     {
-        _rb.velocity = new Vector2(0, 0);
+        //_rb.velocity = new Vector2(0, 0);
+        _walking = false; 
+        _backWalking = false;
     }
     
     private void Attacking()
     {
         _anim.SetBool("isAttacking", _isAttacking);
+        _anim.SetBool("CanInput", canInput);
+        
+        if (!_isAttacking)
+        {
+            canInput = true; 
+        }
+        
+        if ((_isAttacking && !inputBuffer) || _hit.isStunned) return;
         
         if (Input.GetButtonDown("Light " + _playerNumber))
         {
               _anim.SetTrigger("LightAttack");
-              
+              attackStrength = 1;
+              canInput = false;
+              inputBuffer = false;
         }
 
         if (Input.GetButtonDown("Medium " + _playerNumber))
         {
             _anim.SetTrigger("MediumAttack");
+            attackStrength = 2;
+            canInput = false;
+            inputBuffer = false;
         }
         
         if (Input.GetButtonDown("Heavy " + _playerNumber))
         {
             _anim.SetTrigger("HeavyAttack");
+            attackStrength = 3;
+            canInput = false;
+            inputBuffer = false;
         }
     }
 
     public void AttackEnded()
     {
         _isAttacking = false;
+        attackStrength = 0;
+        hitConfirm = false;
     }
 
     public void AttackStarted()
     {
-        StopMovement();
+        
         _isAttacking = true;
+        canInput = false;
+        StopMovement();
+        
+    }
+
+    public void Buffer()
+    {
+        inputBuffer = true; 
+    }
+
+    public void HitCOnfirmable()
+    {
+        hitConfirm = true;
+        inputBuffer = true;
+        canInput = true; 
     }
 }
