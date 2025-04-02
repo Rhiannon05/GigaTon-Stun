@@ -8,7 +8,7 @@ public class ChangeScene : MonoBehaviour
 
     public void Game()
     {
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene("LevelSelect");
     }
     public void Credits()
     {
