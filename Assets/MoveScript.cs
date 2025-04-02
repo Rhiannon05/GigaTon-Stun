@@ -12,7 +12,8 @@ public class MoveScript : MonoBehaviour
     [SerializeField] private GameObject _otherPlayer;
     private HitManager _hit;
     private HitBoxManager _hitBox;
-    
+
+    [Header("Crouching")] private bool isCrouching;
     
     
     [Header("Walking ")]
@@ -63,8 +64,38 @@ public class MoveScript : MonoBehaviour
        ManageOrientation();
        GetOpponentPosition();
 
+
+       Crouching();
     }
 
+    private void Crouching()
+    {
+        if (_playerNumber == 1)
+        {
+            _playerVertical = Input.GetAxisRaw("Vertical " + _playerNumber);
+        }
+        else
+        {
+            _playerVertical = Input.GetAxis("Vertical " + _playerNumber);
+        }
+
+        Debug.Log(_playerVertical + " Gameobject; " + gameObject);
+
+        if (_playerVertical < 0)
+        {
+            //Crouching
+
+            isCrouching = true;
+
+        }
+        else
+        {
+            isCrouching = false;
+        }
+        
+        _anim.SetBool("isCrouching", isCrouching);
+    }
+    
     private void GetOpponentPosition()
     {
         if (_otherPlayer.gameObject.transform.position.x > transform.position.x)
@@ -116,6 +147,9 @@ public class MoveScript : MonoBehaviour
          {
              _playerHorizontal = Input.GetAxis("Horizontal " + _playerNumber);
          }
+         
+         //crouching
+         
          
          
          if (_playerHorizontal > 0)

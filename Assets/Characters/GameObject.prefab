@@ -165,7 +165,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.3635756, y: 1.0908595}
+  m_Offset: {x: 4.627739, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -176,7 +176,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.1175337, y: 3.625337}
+  m_Size: {x: 8.6757145, y: 2.8641405}
   m_EdgeRadius: 0
 --- !u!1 &5196870728339482980
 GameObject:
@@ -273,12 +273,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerSprite: {fileID: 4941072328820713731}
+  _otherPlayer: {fileID: 0}
   _playerSpeed: 8
   _playerHorizontal: 0
   _playerVertical: 0
+  _isAttacking: 0
+  canInput: 0
+  attackStrength: 0
+  inputBuffer: 0
+  hitConfirm: 0
   _playerNumber: 1
   _opponentNumber: 0
-  _otherPlayer: {fileID: 0}
+  _otherPlayerIsToTheRight: 0
 --- !u!50 &1852002308429344642
 Rigidbody2D:
   serializedVersion: 4
@@ -292,7 +298,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 30
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
