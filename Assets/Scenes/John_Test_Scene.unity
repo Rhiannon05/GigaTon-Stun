@@ -800,6 +800,14 @@ PrefabInstance:
       propertyPath: _otherPlayer
       value: 
       objectReference: {fileID: 1260416044}
+    - target: {fileID: 4941072328820713731, guid: 1f6b012f534fe5548b11bbc4e5942314, type: 3}
+      propertyPath: m_Size.x
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4941072328820713731, guid: 1f6b012f534fe5548b11bbc4e5942314, type: 3}
+      propertyPath: m_Size.y
+      value: 15.001465
+      objectReference: {fileID: 0}
     - target: {fileID: 5196870728339482980, guid: 1f6b012f534fe5548b11bbc4e5942314, type: 3}
       propertyPath: m_Name
       value: Gavin

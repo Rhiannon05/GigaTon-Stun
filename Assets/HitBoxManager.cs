@@ -31,8 +31,8 @@ public class HitBoxManager : MonoBehaviour
 
     public void LightPunch()
     {
-        _hitBox.offset = new Vector2(1.4f, 1.1f);
-        _hitBox.size = new Vector2(6.1f, 3.6f);
+        _hitBox.offset = new Vector2(1.04f, 1.1f);
+        _hitBox.size = new Vector2(5.4f, 3.6f);
         damageDealt = 5;
         stunDuration = 0.15f;
         pushback = 20;
@@ -41,8 +41,8 @@ public class HitBoxManager : MonoBehaviour
 
     public void MediumPunch()
     {
-        _hitBox.offset = new Vector2(0f, 0.9f);
-        _hitBox.size = new Vector2(10.5f, 9.1f);
+        _hitBox.offset = new Vector2(-1f, 3f);
+        _hitBox.size = new Vector2(8.6f, 5f);
         damageDealt = 99;
         stunDuration = 0.35f;
         pushback = 35;
@@ -51,10 +51,40 @@ public class HitBoxManager : MonoBehaviour
 
     public void OBLITERATIONKICK()
     {
-        _hitBox.offset = new Vector2(4.6f, 0f);
-        _hitBox.size = new Vector2(8.6f, 2.9f);
+        _hitBox.offset = new Vector2(1.85f, 0f);
+        _hitBox.size = new Vector2(3.1f, 2.9f);
         damageDealt = 10;
         stunDuration = 0.65f;
+        pushback = 45;
+        ActivateHitbox();
+    }
+    
+    public void CouchingLight()
+    {
+        _hitBox.offset = new Vector2(1.1f, 1.3f);
+        _hitBox.size = new Vector2(4.7f, 2f);
+        damageDealt = 4;
+        stunDuration = 0.3f;
+        pushback = 20;
+        ActivateHitbox();
+    }
+    
+    public void CouchingMedium()
+    {
+        _hitBox.offset = new Vector2(1.8f, -1.9f);
+        _hitBox.size = new Vector2(5.2f, 1.9f);
+        damageDealt = 6;
+        stunDuration = 0.65f;
+        pushback = 15;
+        ActivateHitbox();
+    }
+    
+    public void CouchingHeavy()
+    {
+        _hitBox.offset = new Vector2(3.1f, 1.8f);
+        _hitBox.size = new Vector2(2.7f, 4.1f);
+        damageDealt = 20;
+        stunDuration = 0.9f;
         pushback = 45;
         ActivateHitbox();
     }
