@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Credits.unity
     guid: 8db81526e4df3b8489ff40f6314c4cfb
   - enabled: 1
-    path: Assets/Scenes/Level.unity
+    path: Assets/Scenes/LevelSelect.unity
     guid: a124025242cdba3499296f7cd5e395ea
   - enabled: 1
     path: Assets/Scenes/LoseScreen.unity
