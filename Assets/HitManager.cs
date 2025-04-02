@@ -5,7 +5,11 @@ using UnityEngine;
 
 public class HitManager : MonoBehaviour
 {
-    [SerializeField] private float _health;
+    [Header("health")]
+    [SerializeField]  float _health, max_health = 100f;
+    [SerializeField] HpBar hp;
+    [SerializeField] GameObject fill;
+    [Header("anim&push")]
     private Animator _anim;
     private PushManagement _push;
 
@@ -21,11 +25,15 @@ public class HitManager : MonoBehaviour
         _anim = GetComponentInChildren<Animator>();
         _push = GetComponent<PushManagement>();
         _move = GetComponent<MoveScript>();
+        _health = max_health;
+        hp = GetComponentInChildren<HpBar>();
+        hp.UpdateBar(_health, max_health);
     }
 
     public void TakeDamage(float damage, float stunTimeR, float pushed)
     {
         _health -= damage;
+        hp.UpdateBar(_health, max_health);
         if (stunTime < stunTimeR)
         {
             stunTime = stunTimeR; 
@@ -36,8 +44,12 @@ public class HitManager : MonoBehaviour
         
         //This one hates me 
         _push.Pushback(pushed);
-        
-        
+
+        if (_health <= 0)
+        {
+            fill.SetActive(false);
+        }
+
     }
 
     private void Update()

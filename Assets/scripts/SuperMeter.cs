@@ -5,21 +5,21 @@ using UnityEngine.UI;
 
 public class SuperMeter : MonoBehaviour
 {
-    [SerializeField] Slider slider;
+    //[SerializeField] Slider slider;
 
 
-    public void UpdateBar(float currentValue, float maxValue)
-    {
-        slider.value = currentValue / maxValue;
-    }
+    //public void UpdateSuperBar(float currentValue, float maxValue)
+    //{
+    //    slider.value = currentValue / maxValue;
+    //}
 
-    //Move this to player Script.
-    [SerializeField] float meter, maxMeter = 10f;
-    [SerializeField] SuperMeter meterBar;
+    ////Move this to player Script.
+    //[SerializeField] float meter, maxMeter = 10f;
+    //[SerializeField] SuperMeter meterBar;
 
-    private void Start()
-    {
-        meter = 0f;
-        meterBar.UpdateBar(meter, maxMeter); //and this to the code where the meter increases as wellS
-    }
+    //private void Start()
+    //{
+    //    meter = 0f;
+    //    meterBar.UpdateSuperBar(meter, maxMeter); //and this to the code where the meter increases as wellS
+    //}
 }
