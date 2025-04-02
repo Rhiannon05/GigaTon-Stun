@@ -34,7 +34,10 @@ public class MoveScript : MonoBehaviour
     [Header("PlayerData")]
     [SerializeField] private int _playerNumber;
     public int _opponentNumber;
-    public bool _otherPlayerIsToTheRight; 
+    public bool _otherPlayerIsToTheRight;
+
+
+    [Header("Disadvantage State")] private bool isLaunched = false;
     
     // Start is called before the first frame update
     void Start()
@@ -66,8 +69,17 @@ public class MoveScript : MonoBehaviour
 
 
        Crouching();
+       
     }
 
+    private void LaunchManager()
+    {
+        if (isLaunched)
+        {
+            
+        }
+    }
+    
     private void Crouching()
     {
         if (_playerNumber == 1)
