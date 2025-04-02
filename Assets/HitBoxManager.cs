@@ -34,8 +34,8 @@ public class HitBoxManager : MonoBehaviour
         _hitBox.offset = new Vector2(1.4f, 1.1f);
         _hitBox.size = new Vector2(6.1f, 3.6f);
         damageDealt = 5;
-        stunDuration = 0.65f;
-        pushback = 5;
+        stunDuration = 0.15f;
+        pushback = 20;
         ActivateHitbox();
     }
 
@@ -44,8 +44,8 @@ public class HitBoxManager : MonoBehaviour
         _hitBox.offset = new Vector2(0f, 0.9f);
         _hitBox.size = new Vector2(10.5f, 9.1f);
         damageDealt = 99;
-        stunDuration = 0.85f;
-        pushback = 22;
+        stunDuration = 0.35f;
+        pushback = 35;
         ActivateHitbox();
     }
 
@@ -54,7 +54,7 @@ public class HitBoxManager : MonoBehaviour
         _hitBox.offset = new Vector2(4.6f, 0f);
         _hitBox.size = new Vector2(8.6f, 2.9f);
         damageDealt = 10;
-        stunDuration = 1.3f;
+        stunDuration = 0.65f;
         pushback = 45;
         ActivateHitbox();
     }
