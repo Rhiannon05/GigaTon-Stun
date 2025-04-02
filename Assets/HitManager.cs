@@ -37,7 +37,7 @@ public class HitManager : MonoBehaviour
         //This one hates me 
         _push.Pushback(pushed);
         
-        _move._isAttacking = false;
+        
     }
 
     private void Update()
@@ -50,6 +50,7 @@ public class HitManager : MonoBehaviour
         if (stunTime > 0)
         {
             stunTime -= Time.deltaTime;
+            _move._isAttacking = false;
             isStunned = true;
         }
         else
