@@ -37,7 +37,8 @@ public class MoveScript : MonoBehaviour
     public bool _otherPlayerIsToTheRight;
 
 
-    [Header("Disadvantage State")] private bool isLaunched = false;
+    [Header("Disadvantage State")] public bool isLaunched = false;
+    public bool invulnerable;
     
     // Start is called before the first frame update
     void Start()
@@ -69,15 +70,14 @@ public class MoveScript : MonoBehaviour
 
 
        Crouching();
-       
+       LaunchManager();
     }
 
-    private void LaunchManager()
+    public void LaunchManager()
     {
-        if (isLaunched)
-        {
-            
-        }
+       //Play animation of being launched
+       //Become intangible during launch
+       _anim.SetBool("isLaunched", isLaunched);
     }
     
     private void Crouching()

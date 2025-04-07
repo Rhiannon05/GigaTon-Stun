@@ -17,7 +17,7 @@ public class HitManager : MonoBehaviour
 
     private MoveScript _move;
 
-    private float stunTime;
+    public float stunTime;
     public bool isStunned; 
     
     private void Start()
@@ -30,8 +30,11 @@ public class HitManager : MonoBehaviour
         hp.UpdateBar(_health, max_health);
     }
 
-    public void TakeDamage(float damage, float stunTimeR, float pushed)
+    public void TakeDamage(float damage, float stunTimeR, float pushed, bool launched)
     {
+
+        if (_move.invulnerable) return;
+        
         _health -= damage;
         hp.UpdateBar(_health, max_health);
         if (stunTime < stunTimeR)
@@ -39,11 +42,19 @@ public class HitManager : MonoBehaviour
             stunTime = stunTimeR; 
         }
         //flash white
+
+        if (!launched)
+        {
+            //This one hates me 
+                    _push.Pushback(pushed);
+        }
+        else
+        {
+            //Launch player in the air
+            _move.isLaunched = true;
+        }
         
         
-        
-        //This one hates me 
-        _push.Pushback(pushed);
 
         if (_health <= 0)
         {
@@ -59,6 +70,8 @@ public class HitManager : MonoBehaviour
 
     private void ManageStun()
     {
+        if (_move.isLaunched) return;
+        
         if (stunTime > 0)
         {
             stunTime -= Time.deltaTime;
