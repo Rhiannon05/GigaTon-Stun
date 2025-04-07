@@ -7,7 +7,8 @@ public class AnimationEventReferencer : MonoBehaviour
 {
     private MoveScript _move;
     private HitManager _hit;
-
+    
+    
     private void Start()
     {
         _move = GetComponentInParent<MoveScript>();
@@ -24,6 +25,8 @@ public class AnimationEventReferencer : MonoBehaviour
         _move.AttackStarted();
     }
 
+    
+    
     public void Buff()
     {
         _move.Buffer();
