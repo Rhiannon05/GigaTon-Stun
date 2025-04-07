@@ -13,7 +13,8 @@ public class HitBoxManager : MonoBehaviour
     private PushManagement _push; 
     private float damageDealt;
     private float stunDuration;
-
+    public float Meter, MaxMeter;
+    public Image SuperMeterBar;
     private float pushback = 0;
     private bool willLaunch;
     
@@ -28,7 +29,7 @@ public class HitBoxManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        SuperMeterBar.fillAmount = Meter / MaxMeter;
     }
 
     public void LightPunch()
@@ -36,6 +37,7 @@ public class HitBoxManager : MonoBehaviour
         _hitBox.offset = new Vector2(1.04f, 1.1f);
         _hitBox.size = new Vector2(5.4f, 3.6f);
         damageDealt = 5;
+        //meter += 1;
         stunDuration = 0.15f;
         pushback = 20;
         willLaunch = false;
@@ -47,6 +49,7 @@ public class HitBoxManager : MonoBehaviour
         _hitBox.offset = new Vector2(-1f, 3f);
         _hitBox.size = new Vector2(8.6f, 5f);
         damageDealt = 99;
+        Meter += 2;
         stunDuration = 0.35f;
         pushback = 35;
         willLaunch = false;
@@ -58,6 +61,7 @@ public class HitBoxManager : MonoBehaviour
         _hitBox.offset = new Vector2(1.85f, 0f);
         _hitBox.size = new Vector2(3.1f, 2.9f);
         damageDealt = 10;
+        Meter += 3;
         stunDuration = 0.65f;
         pushback = 45;
         willLaunch = true;
@@ -69,6 +73,7 @@ public class HitBoxManager : MonoBehaviour
         _hitBox.offset = new Vector2(1.1f, 1.3f);
         _hitBox.size = new Vector2(4.7f, 2f);
         damageDealt = 4;
+        Meter += 1;
         stunDuration = 0.3f;
         pushback = 20;
         willLaunch = false;
@@ -80,6 +85,7 @@ public class HitBoxManager : MonoBehaviour
         _hitBox.offset = new Vector2(1.8f, -1.9f);
         _hitBox.size = new Vector2(5.2f, 1.9f);
         damageDealt = 6;
+        Meter += 2;
         stunDuration = 0.65f;
         pushback = 15;
         willLaunch = false;
@@ -91,6 +97,7 @@ public class HitBoxManager : MonoBehaviour
         _hitBox.offset = new Vector2(3.1f, 1.8f);
         _hitBox.size = new Vector2(2.7f, 4.1f);
         damageDealt = 20;
+        Meter += 3;
         stunDuration = 0.9f;
         pushback = 45;
         willLaunch = true;
