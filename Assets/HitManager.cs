@@ -7,7 +7,7 @@ public class HitManager : MonoBehaviour
 {
     [Header("health")]
     [SerializeField]  float _health, max_health = 100f;
-    [SerializeField] HpBar hp;
+    [SerializeField] MeterBar hp;
     [SerializeField] GameObject fill;
     [Header("anim&push")]
     private Animator _anim;
@@ -26,7 +26,7 @@ public class HitManager : MonoBehaviour
         _push = GetComponent<PushManagement>();
         _move = GetComponent<MoveScript>();
         _health = max_health;
-        hp = GetComponentInChildren<HpBar>();
+        hp = GetComponentInChildren<MeterBar>();
         hp.UpdateBar(_health, max_health);
     }
 

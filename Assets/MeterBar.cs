@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HpBar : MonoBehaviour
+public class MeterBar : MonoBehaviour
 {
-    [SerializeField] Slider slider;
-
+    [SerializeField] Slider slider
+        ;
+   
 
     public void UpdateBar(float currentValue, float maxValue)
     {
         slider.value = currentValue / maxValue;
     }
+
 
 
     void Start()
