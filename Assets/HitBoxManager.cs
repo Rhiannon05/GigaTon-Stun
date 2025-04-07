@@ -15,6 +15,7 @@ public class HitBoxManager : MonoBehaviour
     private float stunDuration;
 
     private float pushback = 0;
+    private bool willLaunch;
     
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,7 @@ public class HitBoxManager : MonoBehaviour
         damageDealt = 5;
         stunDuration = 0.15f;
         pushback = 20;
+        willLaunch = false;
         ActivateHitbox();
     }
 
@@ -47,6 +49,7 @@ public class HitBoxManager : MonoBehaviour
         damageDealt = 99;
         stunDuration = 0.35f;
         pushback = 35;
+        willLaunch = false;
         ActivateHitbox();
     }
 
@@ -57,6 +60,7 @@ public class HitBoxManager : MonoBehaviour
         damageDealt = 10;
         stunDuration = 0.65f;
         pushback = 45;
+        willLaunch = true;
         ActivateHitbox();
     }
     
@@ -67,6 +71,7 @@ public class HitBoxManager : MonoBehaviour
         damageDealt = 4;
         stunDuration = 0.3f;
         pushback = 20;
+        willLaunch = false;
         ActivateHitbox();
     }
     
@@ -77,6 +82,7 @@ public class HitBoxManager : MonoBehaviour
         damageDealt = 6;
         stunDuration = 0.65f;
         pushback = 15;
+        willLaunch = false;
         ActivateHitbox();
     }
     
@@ -87,6 +93,7 @@ public class HitBoxManager : MonoBehaviour
         damageDealt = 20;
         stunDuration = 0.9f;
         pushback = 45;
+        willLaunch = true;
         ActivateHitbox();
     }
     
@@ -109,7 +116,7 @@ public class HitBoxManager : MonoBehaviour
             
             _move.HitCOnfirmable();
             
-            _hitOpp.TakeDamage(damageDealt, stunDuration, pushback);
+            _hitOpp.TakeDamage(damageDealt, stunDuration, pushback, willLaunch);
             
             //This one works
             _push.Pushback(pushback);
