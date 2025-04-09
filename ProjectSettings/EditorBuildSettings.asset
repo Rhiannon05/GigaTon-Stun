@@ -26,4 +26,34 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WinScreen.unity
     guid: 825be527704f52443b96651418c884a1
+  - enabled: 1
+    path: Assets/Scenes/Levels/Antartica.unity
+    guid: d6adf5e72123bf1408aae5e2b8e84e25
+  - enabled: 1
+    path: Assets/Scenes/Levels/BoxingRing.unity
+    guid: d61d5e03754e14645b00394e2b057470
+  - enabled: 1
+    path: Assets/Scenes/Levels/Bridge.unity
+    guid: b688fa40a3148e74b895ee3f0628b692
+  - enabled: 1
+    path: Assets/Scenes/Levels/Church.unity
+    guid: 3199117c791b3f546b58dfdad6d13954
+  - enabled: 1
+    path: Assets/Scenes/Levels/Moon.unity
+    guid: a37491f15bc221a4e9a725a1a289c1a9
+  - enabled: 1
+    path: Assets/Scenes/Levels/Outback.unity
+    guid: 52912098ee3fc47479edf7773f90e3a7
+  - enabled: 1
+    path: Assets/Scenes/Levels/Ruins.unity
+    guid: 3eb3c9b8376604c49abadc938f7cf5bc
+  - enabled: 1
+    path: Assets/Scenes/Levels/Fields.unity
+    guid: 0b0484a6652483242ab5094f105f21c1
+  - enabled: 1
+    path: Assets/Scenes/Levels/Steakhouse.unity
+    guid: 4fe3843d630c6cf42bf2f72296cc70f7
+  - enabled: 1
+    path: Assets/Scenes/Levels/Stadium.unity
+    guid: fc1d5e72bca4ef1458ab9b234b9cc17e
   m_configObjects: {}
