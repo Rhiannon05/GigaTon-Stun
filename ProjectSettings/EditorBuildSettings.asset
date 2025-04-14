@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Menu.unity
+    guid: 56b1e0f02a98b024ea5539246f90a8c5
   - enabled: 1
     path: Assets/Scenes/Controls.unity
     guid: 8a4c9ebe7109c9041b58081a22484bf3
@@ -21,26 +21,11 @@ EditorBuildSettings:
     path: Assets/Scenes/LoseScreen.unity
     guid: 7b2ccb9d913263b41b5ccf818a9183b2
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
-    guid: 56b1e0f02a98b024ea5539246f90a8c5
-  - enabled: 1
     path: Assets/Scenes/WinScreen.unity
     guid: 825be527704f52443b96651418c884a1
   - enabled: 1
-    path: Assets/Scenes/Levels/Antartica.unity
-    guid: d6adf5e72123bf1408aae5e2b8e84e25
-  - enabled: 1
-    path: Assets/Scenes/Levels/BoxingRing.unity
-    guid: 4c92040a91c6f554ab447d98478ee429
-  - enabled: 1
-    path: Assets/Scenes/Levels/Bridge.unity
-    guid: b688fa40a3148e74b895ee3f0628b692
-  - enabled: 1
-    path: Assets/Scenes/Levels/Church.unity
-    guid: 3199117c791b3f546b58dfdad6d13954
-  - enabled: 1
-    path: Assets/Scenes/Levels/Fields.unity
-    guid: 0b0484a6652483242ab5094f105f21c1
+    path: Assets/Scenes/John_Test_Scene 1.unity
+    guid: e2bdb56f7d453fe45a7440297d13fcc4
   - enabled: 1
     path: Assets/Scenes/Levels/Moon.unity
     guid: 0e9a93fed8349c34e8e544012c3a0620

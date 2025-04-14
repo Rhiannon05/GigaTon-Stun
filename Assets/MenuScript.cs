@@ -63,6 +63,11 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
+    public void Test()
+    {
+        SceneManager.LoadScene("John_Test_Scene 1");
+    }
+
     public void Quit()
     {
         Application.Quit();
