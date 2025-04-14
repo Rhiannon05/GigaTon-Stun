@@ -25,7 +25,7 @@ public class Timer : MonoBehaviour
         timeLeft -= Time.deltaTime;
         //Debug.Log(timeLeft);
         TimerText = System.Math.Round(timeLeft, 0).ToString();
-        Debug.Log(TimerText);
+        //Debug.Log(TimerText);
         timerText = this.GetComponent<TextMeshProUGUI>();
         timerText.text = TimerText;
         int secondsToDisplay = (int)(timeLeft % 60);
