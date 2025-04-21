@@ -41,4 +41,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Steakhouse.unity
     guid: 4fe3843d630c6cf42bf2f72296cc70f7
+  - enabled: 1
+    path: Assets/Scenes/Levels/BoxingRing.unity
+    guid: 4c92040a91c6f554ab447d98478ee429
+  - enabled: 1
+    path: Assets/Scenes/Levels/Antartica.unity
+    guid: d6adf5e72123bf1408aae5e2b8e84e25
   m_configObjects: {}
