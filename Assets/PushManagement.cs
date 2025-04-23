@@ -3,6 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//This script manages the pushback that occurs to both players on hit
+//This script will be fine if nothing about it is changed
+//*Thumbs up emoji*
+
 public class PushManagement : MonoBehaviour
 {
     private Rigidbody2D _rb;

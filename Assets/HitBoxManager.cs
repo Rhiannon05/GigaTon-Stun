@@ -6,17 +6,18 @@ using UnityEngine.UI;
 
 public class HitBoxManager : MonoBehaviour
 {
-
-
+    //References to components
     private BoxCollider2D _hitBox;
     private MoveScript _move;
     private PushManagement _push; 
-    private float damageDealt;
-    private float stunDuration;
+    
+    //Attack properties
+    private float damageDealt; //Damage of attack
+    private float stunDuration; //Stun length
     public float Meter, MaxMeter = 12;
     public Image SuperMeterBar;
-    private float pushback = 0;
-    private bool willLaunch;
+    private float pushback = 0; //Pushback of the attack
+    private bool willLaunch; //If the attack will launch opponent
     
     // Start is called before the first frame update
     void Start()
@@ -34,13 +35,14 @@ public class HitBoxManager : MonoBehaviour
 
     public void LightPunch()
     {
-        _hitBox.offset = new Vector2(1.04f, 1.1f);
-        _hitBox.size = new Vector2(5.4f, 3.6f);
-        damageDealt = 5;
-        stunDuration = 0.15f;
-        pushback = 10;
-        willLaunch = false;
-        ActivateHitbox();
+        //Every attack will have this setup with each one dealing different damages and stats
+        _hitBox.offset = new Vector2(1.04f, 1.1f); //Set hitbox size
+        _hitBox.size = new Vector2(5.4f, 3.6f); //Set hitbox size
+        damageDealt = 5; //Set damage
+        stunDuration = 0.15f; //Set stun
+        pushback = 10; //Set pushback
+        willLaunch = false; //Will launch?
+        ActivateHitbox(); //Enable hitbox
     }
 
     public void MediumPunch()
@@ -100,7 +102,6 @@ public class HitBoxManager : MonoBehaviour
     
     private void ActivateHitbox()
     {
-        
         _hitBox.enabled = true; 
     }
 
@@ -109,16 +110,21 @@ public class HitBoxManager : MonoBehaviour
         _hitBox.enabled = false;
     }
 
+    //On collision with the other player do damage
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player " + _move._opponentNumber))
         {
+            //Get other player
             HitManager _hitOpp = other.gameObject.GetComponent<HitManager>(); 
             
+            //Allow hitconfirming
             _move.HitCOnfirmable();
             
+            //Opponent takes damage
             _hitOpp.TakeDamage(damageDealt, stunDuration, pushback, willLaunch);
             
+            //Gain meter
             Meter += 2;
 
             //This one works

@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//This script will be called by various animation triggers and will manage a lot of the heavy lifting in terms of triggring animations and events
+
 public class AnimationEventReferencer : MonoBehaviour
 {
+    //References
     private MoveScript _move;
     private HitManager _hit;
-    
     
     private void Start()
     {
@@ -25,8 +27,6 @@ public class AnimationEventReferencer : MonoBehaviour
         _move.AttackStarted();
     }
 
-    
-    
     public void Buff()
     {
         _move.Buffer();
