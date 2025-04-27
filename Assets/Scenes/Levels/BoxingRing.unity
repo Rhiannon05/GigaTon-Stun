@@ -2181,8 +2181,8 @@ GameObject:
   - component: {fileID: 493470620709455179}
   - component: {fileID: 767878941959171179}
   - component: {fileID: 1657999663096649080}
-  - component: {fileID: 7159717441910922097}
   - component: {fileID: 7346223049863913069}
+  - component: {fileID: 7346223049863913070}
   m_Layer: 0
   m_Name: Tinman_Sprite
   m_TagString: Untagged
@@ -2489,21 +2489,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7159717441910922097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4676764441991592641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81b700dce93a78c42bc8e2c3a2467fca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Meter: 0
-  MaxMeter: 12
-  SuperMeterBar: {fileID: 0}
 --- !u!4 &7346223049863913068
 Transform:
   m_ObjectHideFlags: 0
@@ -2564,6 +2549,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.315645, y: 5.7569942}
   m_EdgeRadius: 0
+--- !u!114 &7346223049863913070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4676764441991592641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c5357512a872148b0e35b0e7205956, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Meter: 0
+  MaxMeter: 12
+  SuperMeterBar: {fileID: 0}
 --- !u!114 &8384504605932415643
 MonoBehaviour:
   m_ObjectHideFlags: 0
