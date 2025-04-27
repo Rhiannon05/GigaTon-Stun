@@ -1009,7 +1009,7 @@ GameObject:
   - component: {fileID: 936688615}
   m_Layer: 0
   m_Name: ABSO
-  m_TagString: Player 1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1110,7 +1110,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936688609}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31b2f77f1b2ba01448f1ceef61c08806, type: 3}
   m_Name: 
@@ -2283,7 +2283,7 @@ MonoBehaviour:
   inputBuffer: 0
   hitConfirm: 0
   _playerNumber: 2
-  _opponentNumber: 1
+  _opponentNumber: 0
   _otherPlayerIsToTheRight: 0
   isLaunched: 0
   invulnerable: 0
@@ -2395,8 +2395,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5980451356645395680}
-  - component: {fileID: 5863937403188419395}
   - component: {fileID: 4985755239487864721}
+  - component: {fileID: 5863937403188419395}
   - component: {fileID: 2165462874652094460}
   - component: {fileID: 8384504605932415643}
   - component: {fileID: 8951807673207577102}
@@ -2511,7 +2511,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4676764441991592641}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -2536,7 +2536,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.05314946, y: 1.1944113}
+  m_Offset: {x: 1.2241517, y: 2.299517}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2547,7 +2547,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 9.315645, y: 5.7569942}
+  m_Size: {x: 3.6610777, y: 1.709867}
   m_EdgeRadius: 0
 --- !u!114 &7346223049863913070
 MonoBehaviour:
@@ -2558,7 +2558,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4676764441991592641}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89c5357512a872148b0e35b0e7205956, type: 3}
+  m_Script: {fileID: 11500000, guid: 81b700dce93a78c42bc8e2c3a2467fca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Meter: 0
@@ -2629,5 +2629,5 @@ SceneRoots:
   - {fileID: 979848855}
   - {fileID: 843278242}
   - {fileID: 211785112}
-  - {fileID: 5980451356645395680}
   - {fileID: 3983999609776850584}
+  - {fileID: 5980451356645395680}

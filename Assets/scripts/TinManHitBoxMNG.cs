@@ -36,8 +36,8 @@ public class TinManHitBoxMNG : MonoBehaviour
     public void LightPunch()
     {
         //Every attack will have this setup with each one dealing different damages and stats
-        _hitBox.offset = new Vector2(1.04f, 1.1f); //Set hitbox size
-        _hitBox.size = new Vector2(5.4f, 3.6f); //Set hitbox size
+        _hitBox.offset = new Vector2(1.99f, 2.21f); //Set hitbox size
+        _hitBox.size = new Vector2(5.2f, 3.7f); //Set hitbox size
         damageDealt = 5; //Set damage
         stunDuration = 0.15f; //Set stun
         pushback = 10; //Set pushback
@@ -47,8 +47,8 @@ public class TinManHitBoxMNG : MonoBehaviour
 
     public void MediumPunch()
     {
-        _hitBox.offset = new Vector2(-1f, 3f);
-        _hitBox.size = new Vector2(8.6f, 5f);
+        _hitBox.offset = new Vector2(1.99f, 2.21f);
+        _hitBox.size = new Vector2(5.2f, 3.7f);
         damageDealt = 8;
         stunDuration = 0.35f;
         pushback = 20;
@@ -58,8 +58,8 @@ public class TinManHitBoxMNG : MonoBehaviour
 
     public void HeavyPunch()
     {
-        _hitBox.offset = new Vector2(1.85f, 0f);
-        _hitBox.size = new Vector2(3.1f, 2.9f);
+        _hitBox.offset = new Vector2(1.22f, 2.29f);
+        _hitBox.size = new Vector2(3.7f, 1.7f);
         damageDealt = 10;
         stunDuration = 0.65f;
         pushback = 30;

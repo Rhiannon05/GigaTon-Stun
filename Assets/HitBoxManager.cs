@@ -100,8 +100,71 @@ public class HitBoxManager : MonoBehaviour
         ActivateHitbox();
     }
 
-    public void TINMANGETSHITBYCARANDDIES() {
-    
+    public void TinManLight()
+    {
+        //Every attack will have this setup with each one dealing different damages and stats
+        _hitBox.offset = new Vector2(1.99f, 2.21f); //Set hitbox size
+        _hitBox.size = new Vector2(5.2f, 3.7f); //Set hitbox size
+        damageDealt = 5; //Set damage
+        stunDuration = 0.15f; //Set stun
+        pushback = 10; //Set pushback
+        willLaunch = false; //Will launch?
+        ActivateHitbox(); //Enable hitbox
+    }
+
+    public void TinManMedium()
+    {
+        _hitBox.offset = new Vector2(1.99f, 2.21f);
+        _hitBox.size = new Vector2(5.2f, 3.7f);
+        damageDealt = 8;
+        stunDuration = 0.35f;
+        pushback = 20;
+        willLaunch = false;
+        ActivateHitbox();
+    }
+
+    public void TinManHeavy()
+    {
+        _hitBox.offset = new Vector2(1.22f, 2.29f);
+        _hitBox.size = new Vector2(3.7f, 1.7f);
+        damageDealt = 10;
+        stunDuration = 0.65f;
+        pushback = 30;
+        willLaunch = true;
+        ActivateHitbox();
+    }
+
+    public void TinManCL()
+    {
+        _hitBox.offset = new Vector2(1.1f, 1.3f);
+        _hitBox.size = new Vector2(4.7f, 2f);
+        damageDealt = 5;
+        stunDuration = 0.3f;
+        pushback = 20;
+        willLaunch = false;
+        ActivateHitbox();
+    }
+
+    public void TinManCM()
+    {
+        _hitBox.offset = new Vector2(1.8f, -1.9f);
+        _hitBox.size = new Vector2(5.2f, 1.9f);
+        damageDealt = 8;
+        stunDuration = 0.65f;
+        pushback = 15;
+        willLaunch = false;
+        ActivateHitbox();
+    }
+
+    public void TinManCH()
+    {
+        _hitBox.offset = new Vector2(3.1f, 1.8f);
+        _hitBox.size = new Vector2(2.7f, 4.1f);
+        damageDealt = 10;
+        stunDuration = 0.9f;
+        pushback = 45;
+        willLaunch = true;
+        ActivateHitbox();
     }
 
 
