@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HitManager : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class HitManager : MonoBehaviour
     private Animator _anim;
     private PushManagement _push;
     private MoveScript _move;
+   
+
 
     public float stunTime;
     public bool isStunned; 
@@ -27,6 +30,7 @@ public class HitManager : MonoBehaviour
         _push = GetComponent<PushManagement>();
         _move = GetComponent<MoveScript>();
         hp = GetComponentInChildren<MeterBar>();
+       
         
         //Set health to max health
         _health = max_health;
@@ -67,6 +71,7 @@ public class HitManager : MonoBehaviour
         if (_health <= 0)
         {
             fill.SetActive(false);
+            SceneManager.LoadScene("WinScreen");
         }
 
     }
