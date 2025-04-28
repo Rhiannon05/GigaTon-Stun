@@ -47,4 +47,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Antartica.unity
     guid: d6adf5e72123bf1408aae5e2b8e84e25
+  - enabled: 1
+    path: Assets/Scenes/P2WinScreen.unity
+    guid: 0bcc32187c7dc364880f8c36467194b5
+  - enabled: 1
+    path: Assets/Scenes/P1WinScreen.unity
+    guid: a7b089e14201ea942b6a836f34f4a651
   m_configObjects: {}
