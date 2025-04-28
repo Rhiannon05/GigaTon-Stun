@@ -20,11 +20,13 @@ public class AnimationEventReferencer : MonoBehaviour
     public void CeaseAttack()
     {
         _move.AttackEnded();
+        Debug.Log("ahhhhhh");
     }
 
     public void StartAttack()
     {
         _move.AttackStarted();
+        Debug.Log("YUP");
     }
 
     public void Buff()
