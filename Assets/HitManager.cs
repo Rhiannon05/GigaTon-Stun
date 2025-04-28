@@ -71,7 +71,17 @@ public class HitManager : MonoBehaviour
         if (_health <= 0)
         {
             fill.SetActive(false);
-            SceneManager.LoadScene("WinScreen");
+            if(gameObject.CompareTag("Player 1"))
+            {
+                SceneManager.LoadScene("P2WinScreen");
+                Debug.Log("Player 2 won");
+            } 
+            else 
+            {
+                SceneManager.LoadScene("P1WinScreen");
+                Debug.Log("Player 1 won");
+            }
+           
         }
 
     }
