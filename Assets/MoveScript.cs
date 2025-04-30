@@ -281,8 +281,12 @@ public class MoveScript : MonoBehaviour
             attackStrength = 3;
             canInput = false;
             inputBuffer = false;
+
+
         }
     }
+
+
 
     //Attack has concluded to reset properties
     public void AttackEnded()
