@@ -170,8 +170,8 @@ public class HitBoxManager : MonoBehaviour
     public void AbsoLight()
     {
         //Every attack will have this setup with each one dealing different damages and stats
-        _hitBox.offset = new Vector2(0.31f, 1.95f); //Set hitbox size
-        _hitBox.size = new Vector2(2.54f, 1.27f); ; //Set hitbox size
+        _hitBox.offset = new Vector2(1.31f, 1.95f); //Set hitbox size
+        _hitBox.size = new Vector2(3.54f, 1.27f); ; //Set hitbox size
         damageDealt = 5; //Set damage
         stunDuration = 0.15f; //Set stun
         pushback = 10; //Set pushback
@@ -181,8 +181,8 @@ public class HitBoxManager : MonoBehaviour
 
     public void AbsoMedium()
     {
-        _hitBox.offset = new Vector2(0.31f, 1.95f);
-        _hitBox.size = new Vector2(2.54f, 1.27f);
+        _hitBox.offset = new Vector2(1.31f, 1.95f);
+        _hitBox.size = new Vector2(3.54f, 1.27f);
         damageDealt = 8;
         stunDuration = 0.35f;
         pushback = 20;
@@ -192,8 +192,8 @@ public class HitBoxManager : MonoBehaviour
 
     public void AbsoHeavy()
     {
-        _hitBox.offset = new Vector2(0.31f, 1.95f);
-        _hitBox.size = new Vector2(2.54f, 1.27f);
+        _hitBox.offset = new Vector2(1.31f, 1.95f);
+        _hitBox.size = new Vector2(3.54f, 1.27f);
         damageDealt = 10;
         stunDuration = 0.65f;
         pushback = 30;
@@ -203,8 +203,8 @@ public class HitBoxManager : MonoBehaviour
 
     public void AbsoCL()
     {
-        _hitBox.offset = new Vector2(0.31f, 1.95f);
-        _hitBox.size = new Vector2(2.54f, 1.40f);
+        _hitBox.offset = new Vector2(1.31f, 1.95f);
+        _hitBox.size = new Vector2(3.54f, 1.40f);
         damageDealt = 5;
         stunDuration = 0.3f;
         pushback = 20;
@@ -214,8 +214,8 @@ public class HitBoxManager : MonoBehaviour
 
     public void AbsoCM()
     {
-        _hitBox.offset = new Vector2(0.31f, 1.95f);
-        _hitBox.size = new Vector2(2.54f, 1.40f);
+        _hitBox.offset = new Vector2(1.31f, 1.95f);
+        _hitBox.size = new Vector2(3.54f, 1.40f);
         damageDealt = 8;
         stunDuration = 0.65f;
         pushback = 15;
@@ -225,8 +225,8 @@ public class HitBoxManager : MonoBehaviour
 
     public void AbsoCH()
     {
-        _hitBox.offset = new Vector2(0.31f, 1.95f);
-        _hitBox.size = new Vector2(2.54f, 1.40f);
+        _hitBox.offset = new Vector2(1.31f, 1.95f);
+        _hitBox.size = new Vector2(3.54f, 1.40f);
         damageDealt = 10;
         stunDuration = 0.9f;
         pushback = 45;

@@ -56,14 +56,14 @@ public class HitManager : MonoBehaviour
         }
         
 
-        if (!launched)
+        //if (!launched)
         {
-            _push.Pushback(pushed);
+            //_push.Pushback(pushed);
         }
-        else
+        //else
         {
             //Launch player in the air
-            _move.isLaunched = true;
+           // _move.isLaunched = true;
         }
         
         
