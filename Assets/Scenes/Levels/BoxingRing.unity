@@ -1110,7 +1110,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936688609}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31b2f77f1b2ba01448f1ceef61c08806, type: 3}
   m_Name: 
@@ -1121,13 +1121,13 @@ MonoBehaviour:
   _playerHorizontal: 0
   _playerVertical: 0
   _isAttacking: 0
-  canInput: 1
+  canInput: 0
   attackStrength: 0
   inputBuffer: 0
   hitConfirm: 0
-  _playerNumber: 1
-  _opponentNumber: 2
-  _otherPlayerIsToTheRight: 1
+  _playerNumber: 2
+  _opponentNumber: 0
+  _otherPlayerIsToTheRight: 0
   isLaunched: 0
   invulnerable: 0
 --- !u!114 &936688615
@@ -1572,13 +1572,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1256124730}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.59703374, y: -0.06693062, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 936688613}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1256124735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1845,7 +1845,7 @@ RectTransform:
   m_GameObject: {fileID: 1647067206}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.119974, y: 7.204863, z: 3.06616}
+  m_LocalScale: {x: 3.840288, y: 7.204863, z: 3.06616}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1636580023}
@@ -1854,7 +1854,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -539, y: 481}
+  m_AnchoredPosition: {x: 635, y: 481}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1647067208
@@ -2009,7 +2009,7 @@ MonoBehaviour:
   hitConfirm: 0
   _playerNumber: 1
   _opponentNumber: 0
-  _otherPlayerIsToTheRight: 1
+  _otherPlayerIsToTheRight: 0
   isLaunched: 0
   invulnerable: 0
 --- !u!95 &1657999663096649080
@@ -2192,7 +2192,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7346223049863913068
 Transform:
   m_ObjectHideFlags: 0
