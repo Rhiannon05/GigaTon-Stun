@@ -66,7 +66,7 @@ public class CharacterSelectionP1 : MonoBehaviour
                 Zyaria.SetActive(true);
             }
         }
-       
+
     }
     private void CheckBools()
     {
@@ -86,7 +86,7 @@ public class CharacterSelectionP1 : MonoBehaviour
         int value4 = PlayerPrefs.GetInt("ZyariaSelect");
         ZyariaSelect = value4 == 1;
 
-  
+
     }
     public void SaveBools()
     {
@@ -96,7 +96,7 @@ public class CharacterSelectionP1 : MonoBehaviour
         PlayerPrefs.SetInt("FeatherweightSelect", FeatherweightSelect ? 1 : 0);
         PlayerPrefs.SetInt("WernerSelect", WernerSelect ? 1 : 0);
         PlayerPrefs.SetInt("ZyariaSelect", ZyariaSelect ? 1 : 0);
-    
+
     }
 
     public void SelectABSO()
