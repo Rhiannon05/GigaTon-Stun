@@ -22,9 +22,10 @@ public class CharacterSelectionP2 : MonoBehaviour
     // Start is called before the first frame update
     void Update()
     {
-        CheckBoolsP2();
+   
         if (GameStart == true)
         {
+            CheckBoolsP2();
             if (ABSOP2Select == true)
             {
                 ABSOP2.SetActive(true);
@@ -32,6 +33,7 @@ public class CharacterSelectionP2 : MonoBehaviour
                 FeatherweightP2.SetActive(false);
                 WernerP2.SetActive(false);
                 ZyariaP2.SetActive(false);
+                Debug.Log("Why you no work?");
             }
             if (TInmanP2Select == true)
             {
@@ -40,6 +42,7 @@ public class CharacterSelectionP2 : MonoBehaviour
                 FeatherweightP2.SetActive(false);
                 WernerP2.SetActive(false);
                 ZyariaP2.SetActive(false);
+                Debug.Log("DAMN");
             }
             if (FeatherweightP2Select == true)
             {
@@ -71,8 +74,9 @@ public class CharacterSelectionP2 : MonoBehaviour
     private void CheckBoolsP2()
     {
         //check all saves and load 
-        int value = PlayerPrefs.GetInt("ABSOP2Select");
-        ABSOP2Select = value == 1;
+        int value0 = PlayerPrefs.GetInt("ABSOP2Select");
+        ABSOP2Select = value0 == 1;
+        Debug.Log("AbsoLoaded");
 
         int value1 = PlayerPrefs.GetInt("TInmanP2Select");
         TInmanP2Select = value1 == 1;
@@ -92,6 +96,7 @@ public class CharacterSelectionP2 : MonoBehaviour
     {
         //save all the characters selected
         PlayerPrefs.SetInt("ABSOP2Select", ABSOP2Select ? 1 : 0);
+        Debug.Log("Abso");
         PlayerPrefs.SetInt("TInmanP2Select", TInmanP2Select ? 1 : 0);
         PlayerPrefs.SetInt("FeatherweightP2Select", FeatherweightP2Select ? 1 : 0);
         PlayerPrefs.SetInt("WernerP2Select", WernerP2Select ? 1 : 0);
@@ -107,6 +112,7 @@ public class CharacterSelectionP2 : MonoBehaviour
         WernerP2Select = false;
         ZyariaP2Select = false;
         SaveBoolsP2();
+        Debug.Log("AbsoSelected");
     }
     public void SelectTInmanP2()
     {

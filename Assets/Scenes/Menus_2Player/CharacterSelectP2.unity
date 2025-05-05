@@ -773,8 +773,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1512216424}
-        m_TargetAssemblyTypeName: CharacterSelection, Assembly-CSharp
-        m_MethodName: SelectTinmanP2
+        m_TargetAssemblyTypeName: CharacterSelectionP2, Assembly-CSharp
+        m_MethodName: SelectTInmanP2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1501,7 +1501,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1512216424}
-        m_TargetAssemblyTypeName: CharacterSelection, Assembly-CSharp
+        m_TargetAssemblyTypeName: CharacterSelectionP2, Assembly-CSharp
         m_MethodName: SelectABSOP2
         m_Mode: 1
         m_Arguments:
@@ -1865,13 +1865,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ABSOP2Select: 0
-  TinmanP2Select: 0
+  TInmanP2Select: 0
   FeatherweightP2Select: 0
   WernerP2Select: 0
   ZyariaP2Select: 0
   GameStart: 0
   ABSOP2: {fileID: 6270127567001994231, guid: c7946febfa4ba294e82c48f462a0b0f9, type: 3}
-  TinmanP2: {fileID: 5618414558536080082, guid: ee4e32e6b5eb8ec468806d7ff5325243, type: 3}
+  TInmanP2: {fileID: 5618414558536080082, guid: ee4e32e6b5eb8ec468806d7ff5325243, type: 3}
   FeatherweightP2: {fileID: 0}
   WernerP2: {fileID: 0}
   ZyariaP2: {fileID: 0}
