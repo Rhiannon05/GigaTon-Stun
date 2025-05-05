@@ -67,6 +67,14 @@ public class ChangeScene : MonoBehaviour
     {
         SceneManager.LoadScene("John_Test_Scene 1");
     }
+    public void Player1CharacterSelect()
+    {
+        SceneManager.LoadScene("CharacterSelectP1");
+    }
+    public void Player2CharacterSelect()
+    {
+        SceneManager.LoadScene("CharacterSelectP2");
+    }
 
     public void Quit()
     {

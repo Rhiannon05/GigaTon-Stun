@@ -2291,8 +2291,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -45, y: 8.542053}
-  m_SizeDelta: {x: 160, y: 54.9159}
+  m_AnchoredPosition: {x: -8.1216, y: 5.5}
+  m_SizeDelta: {x: 233.7567, y: 61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &944081046
 MonoBehaviour:
@@ -2340,7 +2340,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1180779290}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: Back
+        m_MethodName: Player2CharacterSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

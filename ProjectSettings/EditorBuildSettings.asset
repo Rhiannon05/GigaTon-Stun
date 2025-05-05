@@ -18,6 +18,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus_2Player/LevelSelect.unity
     guid: a124025242cdba3499296f7cd5e395ea
   - enabled: 1
+    path: Assets/Scenes/Menus_2Player/CharacterSelectP1.unity
+    guid: 6762080f93935c441927c6364205bee6
+  - enabled: 1
+    path: Assets/Scenes/Menus_2Player/CharacterSelectP2.unity
+    guid: b6509e18ec923834699b5c88a620f4f0
+  - enabled: 1
     path: Assets/Scenes/Win&Lose/LoseScreen.unity
     guid: 7b2ccb9d913263b41b5ccf818a9183b2
   - enabled: 1

@@ -2697,7 +2697,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 138339705578533119, guid: 1f6b012f534fe5548b11bbc4e5942314, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 842
+      value: 891
       objectReference: {fileID: 0}
     - target: {fileID: 336195034957138812, guid: 1f6b012f534fe5548b11bbc4e5942314, type: 3}
       propertyPath: MaxMeter
