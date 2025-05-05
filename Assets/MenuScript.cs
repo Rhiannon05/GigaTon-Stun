@@ -62,10 +62,25 @@ public class ChangeScene : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
-
-    public void Test()
+    public void TwoOrOne()
     {
-        SceneManager.LoadScene("John_Test_Scene 1");
+        SceneManager.LoadScene("Single-TwoPlayer");
+    }
+    public void ABSOFight()
+    {
+        SceneManager.LoadScene("ABSOFight");
+    }
+    public void TinmanFight()
+    {
+        SceneManager.LoadScene("TinmanFight");
+    }
+    public void GaminFight()
+    {
+        SceneManager.LoadScene("GaminFight");
+    }
+    public void CharacterSelectSingle()
+    {
+        SceneManager.LoadScene("CharacterSelectSIngle");
     }
     public void Player1CharacterSelect()
     {

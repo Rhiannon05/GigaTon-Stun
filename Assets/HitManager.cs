@@ -81,6 +81,7 @@ public class HitManager : MonoBehaviour
                 SceneManager.LoadScene("P1WinScreen");
                 Debug.Log("Player 1 won");
             }
+
            
         }
 

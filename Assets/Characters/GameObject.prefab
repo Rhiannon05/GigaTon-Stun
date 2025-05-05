@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 840072697636276905}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 9.58, y: 0, z: 0}
   m_LocalScale: {x: 0.4078, y: 0.4078, z: 0.4078}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -133,6 +133,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81b700dce93a78c42bc8e2c3a2467fca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Meter: 0
+  MaxMeter: 12
+  SuperMeterBar: {fileID: 0}
 --- !u!61 &4047836292766464075
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -280,7 +283,7 @@ RectTransform:
   m_GameObject: {fileID: 3379902271500171812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.0661638, y: 3.0661638, z: 3.0661638}
+  m_LocalScale: {x: 4.1872296, y: 7.742064, z: 3.0661638}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3766096672520651370}
@@ -289,7 +292,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -333, y: 221}
+  m_AnchoredPosition: {x: 591, y: 477}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2393983827976663298
@@ -474,7 +477,7 @@ GameObject:
   - component: {fileID: 8900752154049518192}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Player 1
+  m_TagString: Player 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
