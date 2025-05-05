@@ -22,10 +22,10 @@ public class CharacterSelection : MonoBehaviour
     // Start is called before the first frame update
     void Update()
     {
-
         if (GameStart == true)
-
+        {
             CheckBools();
+        }
         if (ABSOP2Select == true)
         {
             ABSOP2.SetActive(true);
@@ -68,82 +68,79 @@ public class CharacterSelection : MonoBehaviour
             ZyariaP2.SetActive(true);
         }
     }
-    Debug.Log("I called");
+    private void CheckBools()
+    {
+        //check all saves and load 
+        int value = PlayerPrefs.GetInt("ABSOP2Select");
+        ABSOP2Select = value == 1;
+
+        int value1 = PlayerPrefs.GetInt("TinmanP2Select");
+        TinmanP2Select = value1 == 1;
+
+        int value2 = PlayerPrefs.GetInt("FeatherweightP2Select");
+        FeatherweightP2Select = value2 == 1;
+
+        int value3 = PlayerPrefs.GetInt("WernerP2Select");
+        WernerP2Select = value3 == 1;
+
+        int value4 = PlayerPrefs.GetInt("ZyariaP2Select");
+        ZyariaP2Select = value4 == 1;
+
     }
-private void CheckBools()
-{
-    //check all saves and load 
-    int value = PlayerPrefs.GetInt("ABSOP2Select");
-    ABSOP2Select = value == 1;
+    public void SaveBools()
+    {
+        //save all the characters selected
+        PlayerPrefs.SetInt("ABSOP2Select", ABSOP2Select ? 1 : 0);
+        PlayerPrefs.SetInt("TinmanP2Select", TinmanP2Select ? 1 : 0);
+        PlayerPrefs.SetInt("FeatherweightP2Select", FeatherweightP2Select ? 1 : 0);
+        PlayerPrefs.SetInt("WernerP2Select", WernerP2Select ? 1 : 0);
+        PlayerPrefs.SetInt("ZyariaP2Select", ZyariaP2Select ? 1 : 0);
 
-    int value1 = PlayerPrefs.GetInt("TinmanP2Select");
-    TinmanP2Select = value1 == 1;
+    }
 
-    int value2 = PlayerPrefs.GetInt("FeatherweightP2Select");
-    FeatherweightP2Select = value2 == 1;
-
-    int value3 = PlayerPrefs.GetInt("WernerP2Select");
-    WernerP2Select = value3 == 1;
-
-    int value4 = PlayerPrefs.GetInt("ZyariaP2Select");
-    ZyariaP2Select = value4 == 1;
-
-}
-public void SaveBools()
-{
-    //save all the characters selected
-    PlayerPrefs.SetInt("ABSOP2Select", ABSOP2Select ? 1 : 0);
-    PlayerPrefs.SetInt("TinmanP2Select", TinmanP2Select ? 1 : 0);
-    PlayerPrefs.SetInt("FeatherweightP2Select", FeatherweightP2Select ? 1 : 0);
-    PlayerPrefs.SetInt("WernerP2Select", WernerP2Select ? 1 : 0);
-    PlayerPrefs.SetInt("ZyariaP2Select", ZyariaP2Select ? 1 : 0);
-
-}
-
-public void SelectABSOP2()
-{
-    ABSOP2Select = true;
-    TinmanP2Select = false;
-    FeatherweightP2Select = false;
-    WernerP2Select = false;
-    ZyariaP2Select = false;
-    SaveBools();
-}
-public void SelectTinmanP2()
-{
-    ABSOP2Select = false;
-    TinmanP2Select = true;
-    FeatherweightP2Select = false;
-    WernerP2Select = false;
-    ZyariaP2Select = false;
-    SaveBools();
-}
-public void SelectFeatherweightP2()
-{
-    ABSOP2Select = false;
-    TinmanP2Select = false;
-    FeatherweightP2Select = true;
-    WernerP2Select = false;
-    ZyariaP2Select = false;
-    SaveBools();
-}
-public void SelectWernerP2()
-{
-    ABSOP2Select = false;
-    TinmanP2Select = false;
-    FeatherweightP2Select = false;
-    WernerP2Select = true;
-    ZyariaP2Select = false;
-    SaveBools();
-}
-public void SelectZyariaP2()
-{
-    ABSOP2Select = false;
-    TinmanP2Select = false;
-    FeatherweightP2Select = false;
-    WernerP2Select = false;
-    ZyariaP2Select = true;
-    SaveBools();
-}
-
+    public void SelectABSOP2()
+    {
+        ABSOP2Select = true;
+        TinmanP2Select = false;
+        FeatherweightP2Select = false;
+        WernerP2Select = false;
+        ZyariaP2Select = false;
+        SaveBools();
+    }
+    public void SelectTinmanP2()
+    {
+        ABSOP2Select = false;
+        TinmanP2Select = true;
+        FeatherweightP2Select = false;
+        WernerP2Select = false;
+        ZyariaP2Select = false;
+        SaveBools();
+    }
+    public void SelectFeatherweightP2()
+    {
+        ABSOP2Select = false;
+        TinmanP2Select = false;
+        FeatherweightP2Select = true;
+        WernerP2Select = false;
+        ZyariaP2Select = false;
+        SaveBools();
+    }
+    public void SelectWernerP2()
+    {
+        ABSOP2Select = false;
+        TinmanP2Select = false;
+        FeatherweightP2Select = false;
+        WernerP2Select = true;
+        ZyariaP2Select = false;
+        SaveBools();
+    }
+    public void SelectZyariaP2()
+    {
+        ABSOP2Select = false;
+        TinmanP2Select = false;
+        FeatherweightP2Select = false;
+        WernerP2Select = false;
+        ZyariaP2Select = true;
+        SaveBools();
+    }
 }
