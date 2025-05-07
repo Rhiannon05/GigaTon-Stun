@@ -1379,6 +1379,30 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7863152563017623109, guid: 1c2c0e72aac37694399b103a69c00f2f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052865188920993755, guid: 1c2c0e72aac37694399b103a69c00f2f, type: 3}
+      propertyPath: m_Size.x
+      value: 5.255369
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052865188920993755, guid: 1c2c0e72aac37694399b103a69c00f2f, type: 3}
+      propertyPath: m_Size.y
+      value: 2.065425
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052865188920993755, guid: 1c2c0e72aac37694399b103a69c00f2f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052865188920993755, guid: 1c2c0e72aac37694399b103a69c00f2f, type: 3}
+      propertyPath: m_Offset.x
+      value: 2.021298
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052865188920993755, guid: 1c2c0e72aac37694399b103a69c00f2f, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.17323324
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1392,6 +1416,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 620453841}
     m_Modifications:
+    - target: {fileID: 1544940251177706510, guid: c68e21b221ea0104aae6d1f38e0e1fac, type: 3}
+      propertyPath: m_Size.x
+      value: 1.8008609
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544940251177706510, guid: c68e21b221ea0104aae6d1f38e0e1fac, type: 3}
+      propertyPath: m_Size.y
+      value: 2.5858421
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544940251177706510, guid: c68e21b221ea0104aae6d1f38e0e1fac, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.53667235
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544940251177706510, guid: c68e21b221ea0104aae6d1f38e0e1fac, type: 3}
+      propertyPath: m_Offset.y
+      value: 2.5218139
+      objectReference: {fileID: 0}
     - target: {fileID: 2523102367770002916, guid: c68e21b221ea0104aae6d1f38e0e1fac, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

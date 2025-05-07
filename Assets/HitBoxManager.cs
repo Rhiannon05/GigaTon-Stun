@@ -234,7 +234,6 @@ public class HitBoxManager : MonoBehaviour
         ActivateHitbox();
     }
 
-    // Special Light Attack Hitbox Properties
     public void SpecialLightPunch()
     {
         Debug.Log("Special Light Hitbox Activated"); // Debug log
@@ -244,6 +243,7 @@ public class HitBoxManager : MonoBehaviour
         stunDuration = 0.5f; // Example stun duration
         pushback = 25; // Example pushback
         willLaunch = false; // Example launch property
+        Meter -= 4;
         ActivateHitbox();
     }
 
@@ -257,6 +257,7 @@ public class HitBoxManager : MonoBehaviour
         stunDuration = 0.7f; // Example stun duration
         pushback = 35; // Example pushback
         willLaunch = true; // Example launch property
+        Meter -= 6;
         ActivateHitbox();
     }
 
@@ -270,6 +271,90 @@ public class HitBoxManager : MonoBehaviour
         stunDuration = 1.0f; // Example stun duration
         pushback = 50; // Example pushback
         willLaunch = true; // Example launch property
+        Meter -= 8;
+        ActivateHitbox();
+    }
+
+    public void AbsoSpecialLightPunch()
+    {
+        Debug.Log("Special Light Hitbox Activated"); // Debug log
+        _hitBox.offset = new Vector2(1.3f, 2.0f); // Example values - adjust as needed
+        _hitBox.size = new Vector2(4.0f, 2.5f);   // Example values - adjust as needed
+        damageDealt = 15; // Example damage
+        stunDuration = 0.5f; // Example stun duration
+        pushback = 25; // Example pushback
+        willLaunch = false; // Example launch property
+        Meter -= 4;
+        ActivateHitbox();
+    }
+
+    // Special Medium Attack Hitbox Properties
+    public void AbsoSpecialMediumPunch()
+    {
+        Debug.Log("Special Medium Hitbox Activated"); // Debug log
+        _hitBox.offset = new Vector2(-0.5f, 3.0f); // Example values - adjust as needed
+        _hitBox.size = new Vector2(3.0f, 1.4f);   // Example values - adjust as needed
+        damageDealt = 20; // Example damage
+        stunDuration = 0.7f; // Example stun duration
+        pushback = 35; // Example pushback
+        willLaunch = true; // Example launch property
+        Meter -= 6;
+        ActivateHitbox();
+    }
+
+    // Special Heavy Attack Hitbox Properties
+    public void AbsoSpecialHeavyPunch()
+    {
+        Debug.Log("Special Heavy Hitbox Activated"); // Debug log
+        _hitBox.offset = new Vector2(0.5f, 3.0f); // Example values - adjust as needed
+        _hitBox.size = new Vector2(2.0f, 3.0f);   // Example values - adjust as needed
+        damageDealt = 25; // Example damage
+        stunDuration = 1.0f; // Example stun duration
+        pushback = 50; // Example pushback
+        willLaunch = true; // Example launch property
+        Meter -= 8;
+        ActivateHitbox();
+    }
+
+    // Special Light Attack Hitbox Properties
+    public void TinmanSpecialLightPunch()
+    {
+        Debug.Log("Special Light Hitbox Activated"); // Debug log
+        _hitBox.offset = new Vector2(2.0f, 2.4f); // Example values - adjust as needed
+        _hitBox.size = new Vector2(5.0f, 2.0f);   // Example values - adjust as needed
+        damageDealt = 15; // Example damage
+        stunDuration = 0.5f; // Example stun duration
+        pushback = 25; // Example pushback
+        willLaunch = false; // Example launch property
+        Meter -= 4;
+        ActivateHitbox();
+    }
+
+    // Special Medium Attack Hitbox Properties
+    public void TinmanSpecialMediumPunch()
+    {
+        Debug.Log("Special Medium Hitbox Activated"); // Debug log
+        _hitBox.offset = new Vector2(2.0f, 3.0f); // Example values - adjust as needed
+        _hitBox.size = new Vector2(5.0f, 2.0f);   // Example values - adjust as needed
+        damageDealt = 20; // Example damage
+        stunDuration = 0.7f; // Example stun duration
+        pushback = 35; // Example pushback
+        willLaunch = true; // Example launch property
+        Meter -= 6;
+        ActivateHitbox();
+    }
+
+    // Special Heavy Attack Hitbox Properties
+    public void TinmanSpecialHeavyPunch()
+    {
+        Debug.Log("Special Heavy Hitbox Activated"); // Debug log
+        _hitBox.offset = new Vector2(2.0f, -0.2f); // Example values - adjust as needed
+        _hitBox.size = new Vector2(6.0f, 2.0f);   // Example values - adjust as needed
+        damageDealt = 25; // Example damage
+        stunDuration = 1.0f; // Example stun duration
+        pushback = 50; // Example pushback
+        willLaunch = true; // Example launch property
+        Meter -= 8;
         ActivateHitbox();
     }
 
@@ -283,6 +368,7 @@ public class HitBoxManager : MonoBehaviour
         stunDuration = 2.0f; // Example stun duration
         pushback = 100; // Example pushback
         willLaunch = true; // Super moves often launch or cause a unique reaction
+        Meter -= 10;
         ActivateHitbox();
     }
 
@@ -314,6 +400,7 @@ public class HitBoxManager : MonoBehaviour
             
             //Gain meter
             Meter += 2;
+            
 
             //This one works
             _push.Pushback(pushback);
