@@ -301,8 +301,8 @@ public class HitBoxManager : MonoBehaviour
     public void FeatherLight()
     {
         //Every attack will have this setup with each one dealing different damages and stats
-        _hitBox.offset = new Vector2(1.31f, 1.95f); //Set hitbox size
-        _hitBox.size = new Vector2(3.54f, 1.27f); ; //Set hitbox size
+        _hitBox.offset = new Vector2(1.06f, 0.88f); //Set hitbox size
+        _hitBox.size = new Vector2(2.86f, 1.18f); ; //Set hitbox size
         damageDealt = 5; //Set damage
         stunDuration = 0.15f; //Set stun
         pushback = 10; //Set pushback
@@ -312,8 +312,8 @@ public class HitBoxManager : MonoBehaviour
 
     public void FeatherMedium()
     {
-        _hitBox.offset = new Vector2(1.31f, 1.95f);
-        _hitBox.size = new Vector2(3.54f, 1.27f);
+        _hitBox.offset = new Vector2(1.86f, 0.88f);
+        _hitBox.size = new Vector2(2.86f, 1.18f);
         damageDealt = 8;
         stunDuration = 0.35f;
         pushback = 20;
@@ -323,8 +323,8 @@ public class HitBoxManager : MonoBehaviour
 
     public void FeatherHeavy()
     {
-        _hitBox.offset = new Vector2(1.31f, 1.95f);
-        _hitBox.size = new Vector2(3.54f, 1.27f);
+        _hitBox.offset = new Vector2(1.86f, 0.88f);
+        _hitBox.size = new Vector2(2.86f, 1.18f);
         damageDealt = 10;
         stunDuration = 0.65f;
         pushback = 30;
@@ -334,8 +334,8 @@ public class HitBoxManager : MonoBehaviour
 
     public void FeatherCL()
     {
-        _hitBox.offset = new Vector2(1.31f, 1.95f);
-        _hitBox.size = new Vector2(3.54f, 1.40f);
+        _hitBox.offset = new Vector2(1.06f, -0.33f);
+        _hitBox.size = new Vector2(2.86f, 1.36f);
         damageDealt = 5;
         stunDuration = 0.3f;
         pushback = 20;
@@ -345,8 +345,8 @@ public class HitBoxManager : MonoBehaviour
 
     public void FeatherCM()
     {
-        _hitBox.offset = new Vector2(1.31f, 1.95f);
-        _hitBox.size = new Vector2(3.54f, 1.40f);
+        _hitBox.offset = new Vector2(1.06f, -0.33f);
+        _hitBox.size = new Vector2(2.86f, 1.36f);
         damageDealt = 8;
         stunDuration = 0.65f;
         pushback = 15;
@@ -356,8 +356,8 @@ public class HitBoxManager : MonoBehaviour
 
     public void FeatherCH()
     {
-        _hitBox.offset = new Vector2(1.31f, 1.95f);
-        _hitBox.size = new Vector2(3.54f, 1.40f);
+        _hitBox.offset = new Vector2(1.06f, -0.33f);
+        _hitBox.size = new Vector2(2.86f, 1.36f);
         damageDealt = 10;
         stunDuration = 0.9f;
         pushback = 45;
@@ -533,8 +533,8 @@ public class HitBoxManager : MonoBehaviour
     public void FeatherSpecialLightPunch()
     {
         Debug.Log("Special Light Hitbox Activated"); // Debug log
-        _hitBox.offset = new Vector2(2.0f, 2.0f); // Example values - adjust as needed
-        _hitBox.size = new Vector2(6.0f, 4.0f);   // Example values - adjust as needed
+        _hitBox.offset = new Vector2(1.63f, 0.90f); // Example values - adjust as needed
+        _hitBox.size = new Vector2(4.00f, 0.93f);   // Example values - adjust as needed
         damageDealt = 15; // Example damage
         stunDuration = 0.5f; // Example stun duration
         pushback = 25; // Example pushback
@@ -547,8 +547,8 @@ public class HitBoxManager : MonoBehaviour
     public void FeatherSpecialMediumPunch()
     {
         Debug.Log("Special Medium Hitbox Activated"); // Debug log
-        _hitBox.offset = new Vector2(2.5f, 3.0f); // Example values - adjust as needed
-        _hitBox.size = new Vector2(7.0f, 5.0f);   // Example values - adjust as needed
+        _hitBox.offset = new Vector2(1.63f, 0.90f); // Example values - adjust as needed
+        _hitBox.size = new Vector2(4.00f, 0.93f);   // Example values - adjust as needed
         damageDealt = 20; // Example damage
         stunDuration = 0.7f; // Example stun duration
         pushback = 35; // Example pushback
@@ -561,8 +561,8 @@ public class HitBoxManager : MonoBehaviour
     public void FeatherSpecialHeavyPunch()
     {
         Debug.Log("Special Heavy Hitbox Activated"); // Debug log
-        _hitBox.offset = new Vector2(3.0f, 1.0f); // Example values - adjust as needed
-        _hitBox.size = new Vector2(8.0f, 6.0f);   // Example values - adjust as needed
+        _hitBox.offset = new Vector2(1.63f, 0.90f); // Example values - adjust as needed
+        _hitBox.size = new Vector2(4.00f, 0.93f);   // Example values - adjust as needed
         damageDealt = 25; // Example damage
         stunDuration = 1.0f; // Example stun duration
         pushback = 50; // Example pushback
@@ -572,15 +572,54 @@ public class HitBoxManager : MonoBehaviour
     }
 
     // Super Attack Hitbox Properties
-    public void PerformSuperAttack()
+    public void AbsoSuperAttack()
     {
-        Debug.Log("Super Attack Hitbox Activated"); // Debug log
-        _hitBox.offset = new Vector2(0f, 0f); // Example values - adjust as needed (maybe a full screen hit?)
-        _hitBox.size = new Vector2(10f, 10f); // Example values - adjust as needed
-        damageDealt = 50; // Example damage (high damage for a super)
-        stunDuration = 2.0f; // Example stun duration
-        pushback = 100; // Example pushback
-        willLaunch = true; // Super moves often launch or cause a unique reaction
+        Debug.Log("Super Attack Hitbox Activated"); 
+        _hitBox.offset = new Vector2(0f, 0f); 
+        _hitBox.size = new Vector2(10f, 10f); 
+        damageDealt = 50; 
+        stunDuration = 2.0f;
+        pushback = 100; 
+        willLaunch = true; 
+        Meter -= 10;
+        ActivateHitbox();
+    }
+
+    public void TinManSuperAttack()
+    {
+        Debug.Log("Super Attack Hitbox Activated");
+        _hitBox.offset = new Vector2(0f, 0f);
+        _hitBox.size = new Vector2(10f, 10f);
+        damageDealt = 50;
+        stunDuration = 2.0f;
+        pushback = 100;
+        willLaunch = true;
+        Meter -= 10;
+        ActivateHitbox();
+    }
+
+    public void FeatherSuperAttack()
+    {
+        Debug.Log("Super Attack Hitbox Activated");
+        _hitBox.offset = new Vector2(0f, 0f);
+        _hitBox.size = new Vector2(10f, 10f);
+        damageDealt = 50;
+        stunDuration = 2.0f;
+        pushback = 100;
+        willLaunch = true;
+        Meter -= 10;
+        ActivateHitbox();
+    }
+
+    public void WernerSuperAttack()
+    {
+        Debug.Log("Super Attack Hitbox Activated");
+        _hitBox.offset = new Vector2(0f, 0f);
+        _hitBox.size = new Vector2(10f, 10f);
+        damageDealt = 50;
+        stunDuration = 2.0f;
+        pushback = 100;
+        willLaunch = true;
         Meter -= 10;
         ActivateHitbox();
     }
