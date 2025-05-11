@@ -432,7 +432,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6e5bedba2a84af7418ae7bc78ad9fb07, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8e511210a74b7ea48b312939c9c93765, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.675
   m_Pitch: 1
@@ -1296,7 +1296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7623105291230481526, guid: 07775292970c74f4facf41495c061834, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1363.959
+      value: -1364.959
       objectReference: {fileID: 0}
     - target: {fileID: 7623105291230481526, guid: 07775292970c74f4facf41495c061834, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1528,6 +1528,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1300583014928836534, guid: 85401ff64ee54a348b681bd202850087, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1989365954298590027, guid: 85401ff64ee54a348b681bd202850087, type: 3}
       propertyPath: m_Name
       value: Feather1
@@ -1600,13 +1604,17 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4660635619975222474, guid: d9ef0a2eec0d9cf4fb098264c920ef9d, type: 3}
+      propertyPath: fill
+      value: 
+      objectReference: {fileID: 1631920409}
     - target: {fileID: 6469199785791101424, guid: d9ef0a2eec0d9cf4fb098264c920ef9d, type: 3}
       propertyPath: _otherPlayer
       value: 
       objectReference: {fileID: 936688609}
     - target: {fileID: 9144744704578055957, guid: d9ef0a2eec0d9cf4fb098264c920ef9d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1364.959
+      value: -1365.959
       objectReference: {fileID: 0}
     - target: {fileID: 9144744704578055957, guid: d9ef0a2eec0d9cf4fb098264c920ef9d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1657,6 +1665,11 @@ Transform:
 --- !u!1 &1631920408 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1633981258049326877, guid: d9ef0a2eec0d9cf4fb098264c920ef9d, type: 3}
+  m_PrefabInstance: {fileID: 1631920406}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1631920409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3544404359678413122, guid: d9ef0a2eec0d9cf4fb098264c920ef9d, type: 3}
   m_PrefabInstance: {fileID: 1631920406}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1656249302 stripped

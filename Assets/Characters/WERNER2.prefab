@@ -190,8 +190,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9144744704578055957}
-  - component: {fileID: 6069231887894940099}
   - component: {fileID: 6469199785791101424}
+  - component: {fileID: 6069231887894940099}
   - component: {fileID: 3453769716599959784}
   - component: {fileID: 7194869255806341733}
   - component: {fileID: 4660635619975222474}
@@ -220,6 +220,33 @@ Transform:
   - {fileID: 2037279296367806739}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6469199785791101424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633981258049326877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b2f77f1b2ba01448f1ceef61c08806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerSprite: {fileID: 8751508146782933447}
+  _otherPlayer: {fileID: 0}
+  _playerSpeed: 4
+  _playerHorizontal: 0
+  _playerVertical: 0
+  _isAttacking: 0
+  canInput: 0
+  attackStrength: 0
+  inputBuffer: 0
+  hitConfirm: 0
+  _playerNumber: 2
+  _opponentNumber: 0
+  _otherPlayerIsToTheRight: 0
+  isLaunched: 0
+  invulnerable: 0
 --- !u!61 &6069231887894940099
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -265,33 +292,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.6473804, y: 7.019307}
   m_EdgeRadius: 0
---- !u!114 &6469199785791101424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1633981258049326877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31b2f77f1b2ba01448f1ceef61c08806, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerSprite: {fileID: 8751508146782933447}
-  _otherPlayer: {fileID: 0}
-  _playerSpeed: 4
-  _playerHorizontal: 0
-  _playerVertical: 0
-  _isAttacking: 0
-  canInput: 0
-  attackStrength: 0
-  inputBuffer: 0
-  hitConfirm: 0
-  _playerNumber: 2
-  _opponentNumber: 0
-  _otherPlayerIsToTheRight: 0
-  isLaunched: 0
-  invulnerable: 0
 --- !u!50 &3453769716599959784
 Rigidbody2D:
   serializedVersion: 4
@@ -346,7 +346,7 @@ MonoBehaviour:
   _health: 0
   max_health: 100
   hp: {fileID: 1475231678678597605}
-  fill: {fileID: 2360217524612360930}
+  fill: {fileID: 3544404359678413122}
   stunTime: 0
   isStunned: 0
 --- !u!1 &1792831942245026914

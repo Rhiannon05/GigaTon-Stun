@@ -54,6 +54,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Antartica.unity
     guid: d6adf5e72123bf1408aae5e2b8e84e25
   - enabled: 1
+    path: Assets/Scenes/Levels/Bridge.unity
+    guid: a3b51021b3b7b634cbbb18d51afc9097
+  - enabled: 1
+    path: Assets/Scenes/Levels/Fields.unity
+    guid: 576c2499c6a4fb241aee5cad2cb189ee
+  - enabled: 1
+    path: Assets/Scenes/Levels/Church.unity
+    guid: ba4fd49933725ec4d91bf05f02850f39
+  - enabled: 1
     path: Assets/Scenes/Win&Lose/P1WinScreen.unity
     guid: a7b089e14201ea942b6a836f34f4a651
   - enabled: 1

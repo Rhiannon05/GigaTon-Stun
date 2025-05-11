@@ -328,7 +328,7 @@ public class MoveScript : MonoBehaviour
             }
         }
 
-        //Special Light attack was pressed 
+        //Special Heavy attack was pressed 
         if (Input.GetButton("Special " + _playerNumber))
         {
             if (Input.GetButtonDown("Heavy " + _playerNumber))
@@ -343,6 +343,27 @@ public class MoveScript : MonoBehaviour
                 _hitBox.DisableHitbox();
                 _anim.SetTrigger("SpHeavyAttack");
                 attackStrength = 4;
+                canInput = false;
+                inputBuffer = false;
+
+            }
+        }
+
+        //Super attack was pressed 
+        if (Input.GetButton("Special " + _playerNumber))
+        {
+            if (Input.GetButtonDown("Super " + _playerNumber))
+            {
+                if (hitConfirm && attackStrength < 5)
+                {
+                    canInput = true;
+                    _anim.SetBool("CanInput", canInput);
+                }
+
+                //Same as above attack props
+                _hitBox.DisableHitbox();
+                _anim.SetTrigger("Super");
+                attackStrength = 5;
                 canInput = false;
                 inputBuffer = false;
 

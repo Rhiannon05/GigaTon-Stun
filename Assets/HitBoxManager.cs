@@ -236,7 +236,7 @@ public class HitBoxManager : MonoBehaviour
         //Every attack will have this setup with each one dealing different damages and stats
         _hitBox.offset = new Vector2(1.69f, 1.64f); //Set hitbox size
         _hitBox.size = new Vector2(3.30f, 1.90f); ; //Set hitbox size
-        damageDealt = 5; //Set damage
+        damageDealt = 8; //Set damage
         stunDuration = 0.15f; //Set stun
         pushback = 10; //Set pushback
         willLaunch = false; //Will launch?
@@ -247,7 +247,7 @@ public class HitBoxManager : MonoBehaviour
     {
         _hitBox.offset = new Vector2(1.69f, 1.64f); 
         _hitBox.size = new Vector2(3.30f, 1.90f); ; 
-        damageDealt = 8;
+        damageDealt = 10;
         stunDuration = 0.35f;
         pushback = 20;
         willLaunch = false;
@@ -258,7 +258,7 @@ public class HitBoxManager : MonoBehaviour
     {
         _hitBox.offset = new Vector2(1.69f, 1.64f); 
         _hitBox.size = new Vector2(3.30f, 1.90f); ; 
-        damageDealt = 10;
+        damageDealt = 12;
         stunDuration = 0.65f;
         pushback = 30;
         willLaunch = true;
@@ -269,7 +269,7 @@ public class HitBoxManager : MonoBehaviour
     {
         _hitBox.offset = new Vector2(1.69f, 0.68f); 
         _hitBox.size = new Vector2(3.30f, 1.30f); ; 
-        damageDealt = 5;
+        damageDealt = 8;
         stunDuration = 0.3f;
         pushback = 20;
         willLaunch = false;
@@ -280,7 +280,7 @@ public class HitBoxManager : MonoBehaviour
     {
         _hitBox.offset = new Vector2(1.69f, 0.68f); 
         _hitBox.size = new Vector2(3.30f, 1.30f); ; 
-        damageDealt = 8;
+        damageDealt = 10;
         stunDuration = 0.65f;
         pushback = 15;
         willLaunch = false;
@@ -291,7 +291,7 @@ public class HitBoxManager : MonoBehaviour
     {
         _hitBox.offset = new Vector2(1.69f, 0.68f); 
         _hitBox.size = new Vector2(3.30f, 1.30f); ; 
-        damageDealt = 10;
+        damageDealt = 12;
         stunDuration = 0.9f;
         pushback = 45;
         willLaunch = true;
@@ -303,7 +303,7 @@ public class HitBoxManager : MonoBehaviour
         //Every attack will have this setup with each one dealing different damages and stats
         _hitBox.offset = new Vector2(1.06f, 0.88f); //Set hitbox size
         _hitBox.size = new Vector2(2.86f, 1.18f); ; //Set hitbox size
-        damageDealt = 5; //Set damage
+        damageDealt = 2; //Set damage
         stunDuration = 0.15f; //Set stun
         pushback = 10; //Set pushback
         willLaunch = false; //Will launch?
@@ -314,7 +314,7 @@ public class HitBoxManager : MonoBehaviour
     {
         _hitBox.offset = new Vector2(1.86f, 0.88f);
         _hitBox.size = new Vector2(2.86f, 1.18f);
-        damageDealt = 8;
+        damageDealt = 5;
         stunDuration = 0.35f;
         pushback = 20;
         willLaunch = false;
@@ -325,7 +325,7 @@ public class HitBoxManager : MonoBehaviour
     {
         _hitBox.offset = new Vector2(1.86f, 0.88f);
         _hitBox.size = new Vector2(2.86f, 1.18f);
-        damageDealt = 10;
+        damageDealt = 7;
         stunDuration = 0.65f;
         pushback = 30;
         willLaunch = true;
@@ -336,7 +336,7 @@ public class HitBoxManager : MonoBehaviour
     {
         _hitBox.offset = new Vector2(1.06f, -0.33f);
         _hitBox.size = new Vector2(2.86f, 1.36f);
-        damageDealt = 5;
+        damageDealt = 2;
         stunDuration = 0.3f;
         pushback = 20;
         willLaunch = false;
@@ -347,7 +347,7 @@ public class HitBoxManager : MonoBehaviour
     {
         _hitBox.offset = new Vector2(1.06f, -0.33f);
         _hitBox.size = new Vector2(2.86f, 1.36f);
-        damageDealt = 8;
+        damageDealt = 5;
         stunDuration = 0.65f;
         pushback = 15;
         willLaunch = false;
@@ -358,7 +358,7 @@ public class HitBoxManager : MonoBehaviour
     {
         _hitBox.offset = new Vector2(1.06f, -0.33f);
         _hitBox.size = new Vector2(2.86f, 1.36f);
-        damageDealt = 10;
+        damageDealt = 7;
         stunDuration = 0.9f;
         pushback = 45;
         willLaunch = true;
@@ -453,7 +453,7 @@ public class HitBoxManager : MonoBehaviour
         Debug.Log("Special Light Hitbox Activated"); // Debug log
         _hitBox.offset = new Vector2(2.0f, 2.4f); // Example values - adjust as needed
         _hitBox.size = new Vector2(5.0f, 2.0f);   // Example values - adjust as needed
-        damageDealt = 15; // Example damage
+        damageDealt = 18; // Example damage
         stunDuration = 0.5f; // Example stun duration
         pushback = 25; // Example pushback
         willLaunch = false; // Example launch property
@@ -467,7 +467,7 @@ public class HitBoxManager : MonoBehaviour
         Debug.Log("Special Medium Hitbox Activated"); // Debug log
         _hitBox.offset = new Vector2(2.0f, 3.0f); // Example values - adjust as needed
         _hitBox.size = new Vector2(5.0f, 2.0f);   // Example values - adjust as needed
-        damageDealt = 20; // Example damage
+        damageDealt = 23; // Example damage
         stunDuration = 0.7f; // Example stun duration
         pushback = 35; // Example pushback
         willLaunch = true; // Example launch property
@@ -481,7 +481,7 @@ public class HitBoxManager : MonoBehaviour
         Debug.Log("Special Heavy Hitbox Activated"); // Debug log
         _hitBox.offset = new Vector2(2.0f, -0.2f); // Example values - adjust as needed
         _hitBox.size = new Vector2(6.0f, 2.0f);   // Example values - adjust as needed
-        damageDealt = 25; // Example damage
+        damageDealt = 28; // Example damage
         stunDuration = 1.0f; // Example stun duration
         pushback = 50; // Example pushback
         willLaunch = true; // Example launch property
@@ -494,7 +494,7 @@ public class HitBoxManager : MonoBehaviour
         Debug.Log("Special Light Hitbox Activated"); // Debug log
         _hitBox.offset = new Vector2(0.03f, 0.48f); // Example values - adjust as needed
         _hitBox.size = new Vector2(6.63f, 7.69f);   // Example values - adjust as needed
-        damageDealt = 15; // Example damage
+        damageDealt = 20; // Example damage
         stunDuration = 0.5f; // Example stun duration
         pushback = 25; // Example pushback
         willLaunch = false; // Example launch property
@@ -508,7 +508,7 @@ public class HitBoxManager : MonoBehaviour
         Debug.Log("Special Medium Hitbox Activated"); 
         _hitBox.offset = new Vector2(1.25f, 1.57f); 
         _hitBox.size = new Vector2(4.18f, 3.13f);   
-        damageDealt = 20; // Example damage
+        damageDealt = 25; // Example damage
         stunDuration = 0.7f; // Example stun duration
         pushback = 35; // Example pushback
         willLaunch = true; // Example launch property
@@ -522,7 +522,7 @@ public class HitBoxManager : MonoBehaviour
         Debug.Log("Special Heavy Hitbox Activated"); // Debug log
         _hitBox.offset = new Vector2(-0.37f, 1.82f); // Example values - adjust as needed
         _hitBox.size = new Vector2(4.37f, 4.95f);   // Example values - adjust as needed
-        damageDealt = 25; // Example damage
+        damageDealt = 30; // Example damage
         stunDuration = 1.0f; // Example stun duration
         pushback = 50; // Example pushback
         willLaunch = true; // Example launch property
@@ -535,7 +535,7 @@ public class HitBoxManager : MonoBehaviour
         Debug.Log("Special Light Hitbox Activated"); // Debug log
         _hitBox.offset = new Vector2(1.63f, 0.90f); // Example values - adjust as needed
         _hitBox.size = new Vector2(4.00f, 0.93f);   // Example values - adjust as needed
-        damageDealt = 15; // Example damage
+        damageDealt = 10; // Example damage
         stunDuration = 0.5f; // Example stun duration
         pushback = 25; // Example pushback
         willLaunch = false; // Example launch property
@@ -549,7 +549,7 @@ public class HitBoxManager : MonoBehaviour
         Debug.Log("Special Medium Hitbox Activated"); // Debug log
         _hitBox.offset = new Vector2(1.63f, 0.90f); // Example values - adjust as needed
         _hitBox.size = new Vector2(4.00f, 0.93f);   // Example values - adjust as needed
-        damageDealt = 20; // Example damage
+        damageDealt = 15; // Example damage
         stunDuration = 0.7f; // Example stun duration
         pushback = 35; // Example pushback
         willLaunch = true; // Example launch property
@@ -563,7 +563,7 @@ public class HitBoxManager : MonoBehaviour
         Debug.Log("Special Heavy Hitbox Activated"); // Debug log
         _hitBox.offset = new Vector2(1.63f, 0.90f); // Example values - adjust as needed
         _hitBox.size = new Vector2(4.00f, 0.93f);   // Example values - adjust as needed
-        damageDealt = 25; // Example damage
+        damageDealt = 20; // Example damage
         stunDuration = 1.0f; // Example stun duration
         pushback = 50; // Example pushback
         willLaunch = true; // Example launch property
@@ -577,7 +577,7 @@ public class HitBoxManager : MonoBehaviour
         Debug.Log("Super Attack Hitbox Activated"); 
         _hitBox.offset = new Vector2(0f, 0f); 
         _hitBox.size = new Vector2(10f, 10f); 
-        damageDealt = 50; 
+        damageDealt = 40; 
         stunDuration = 2.0f;
         pushback = 100; 
         willLaunch = true; 
@@ -603,7 +603,7 @@ public class HitBoxManager : MonoBehaviour
         Debug.Log("Super Attack Hitbox Activated");
         _hitBox.offset = new Vector2(0f, 0f);
         _hitBox.size = new Vector2(10f, 10f);
-        damageDealt = 50;
+        damageDealt = 35;
         stunDuration = 2.0f;
         pushback = 100;
         willLaunch = true;
@@ -616,7 +616,7 @@ public class HitBoxManager : MonoBehaviour
         Debug.Log("Super Attack Hitbox Activated");
         _hitBox.offset = new Vector2(0f, 0f);
         _hitBox.size = new Vector2(10f, 10f);
-        damageDealt = 50;
+        damageDealt = 60;
         stunDuration = 2.0f;
         pushback = 100;
         willLaunch = true;
