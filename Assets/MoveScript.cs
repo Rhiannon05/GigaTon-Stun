@@ -350,10 +350,9 @@ public class MoveScript : MonoBehaviour
         }
 
         //Super attack was pressed 
-        if (Input.GetButton("Special " + _playerNumber))
-        {
-            if (Input.GetButtonDown("Super " + _playerNumber))
+        if (Input.GetButtonDown("Super " + _playerNumber))
             {
+                Debug.Log("SuperActivated");
                 if (hitConfirm && attackStrength < 5)
                 {
                     canInput = true;
@@ -362,13 +361,13 @@ public class MoveScript : MonoBehaviour
 
                 //Same as above attack props
                 _hitBox.DisableHitbox();
-                _anim.SetTrigger("Super");
+                _anim.SetTrigger("SuperAttack");
                 attackStrength = 5;
                 canInput = false;
                 inputBuffer = false;
 
             }
-        }
+        
 
     }
 

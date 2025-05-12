@@ -365,47 +365,6 @@ public class HitBoxManager : MonoBehaviour
         ActivateHitbox();
     }
 
-    public void SpecialLightPunch()
-    {
-        Debug.Log("Special Light Hitbox Activated"); // Debug log
-        _hitBox.offset = new Vector2(2.0f, 2.0f); // Example values - adjust as needed
-        _hitBox.size = new Vector2(6.0f, 4.0f);   // Example values - adjust as needed
-        damageDealt = 15; // Example damage
-        stunDuration = 0.5f; // Example stun duration
-        pushback = 25; // Example pushback
-        willLaunch = false; // Example launch property
-        Meter -= 4;
-        ActivateHitbox();
-    }
-
-    // Special Medium Attack Hitbox Properties
-    public void SpecialMediumPunch()
-    {
-        Debug.Log("Special Medium Hitbox Activated"); // Debug log
-        _hitBox.offset = new Vector2(2.5f, 3.0f); // Example values - adjust as needed
-        _hitBox.size = new Vector2(7.0f, 5.0f);   // Example values - adjust as needed
-        damageDealt = 20; // Example damage
-        stunDuration = 0.7f; // Example stun duration
-        pushback = 35; // Example pushback
-        willLaunch = true; // Example launch property
-        Meter -= 6;
-        ActivateHitbox();
-    }
-
-    // Special Heavy Attack Hitbox Properties
-    public void SpecialHeavyPunch()
-    {
-        Debug.Log("Special Heavy Hitbox Activated"); // Debug log
-        _hitBox.offset = new Vector2(3.0f, 1.0f); // Example values - adjust as needed
-        _hitBox.size = new Vector2(8.0f, 6.0f);   // Example values - adjust as needed
-        damageDealt = 25; // Example damage
-        stunDuration = 1.0f; // Example stun duration
-        pushback = 50; // Example pushback
-        willLaunch = true; // Example launch property
-        Meter -= 8;
-        ActivateHitbox();
-    }
-
     public void AbsoSpecialLightPunch()
     {
         Debug.Log("Special Light Hitbox Activated"); // Debug log
@@ -575,8 +534,8 @@ public class HitBoxManager : MonoBehaviour
     public void AbsoSuperAttack()
     {
         Debug.Log("Super Attack Hitbox Activated"); 
-        _hitBox.offset = new Vector2(0f, 0f); 
-        _hitBox.size = new Vector2(10f, 10f); 
+        _hitBox.offset = new Vector2(2.47f, 1.96f); 
+        _hitBox.size = new Vector2(4.50f, 1.97f); 
         damageDealt = 40; 
         stunDuration = 2.0f;
         pushback = 100; 
@@ -588,8 +547,8 @@ public class HitBoxManager : MonoBehaviour
     public void TinManSuperAttack()
     {
         Debug.Log("Super Attack Hitbox Activated");
-        _hitBox.offset = new Vector2(0f, 0f);
-        _hitBox.size = new Vector2(10f, 10f);
+        _hitBox.offset = new Vector2(1.44f, 0.56f);
+        _hitBox.size = new Vector2(4.10f, 5.18f);
         damageDealt = 50;
         stunDuration = 2.0f;
         pushback = 100;

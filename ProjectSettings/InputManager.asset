@@ -601,10 +601,10 @@ InputManager:
     m_Name: Super 1
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: 
+    negativeButton: k
     positiveButton: k
-    altNegativeButton: 
-    altPositiveButton: 
+    altNegativeButton: k
+    altPositiveButton: k
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
