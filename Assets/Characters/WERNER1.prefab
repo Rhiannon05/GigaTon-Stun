@@ -366,7 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3ce94b58fcfad4ab044ade6f6b625b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 100
+  _health: 0
   max_health: 100
   hp: {fileID: 5516644535663073501}
   fill: {fileID: 7188727080417886888}

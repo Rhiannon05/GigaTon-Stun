@@ -34,25 +34,25 @@ EditorBuildSettings:
     guid: e2bdb56f7d453fe45a7440297d13fcc4
   - enabled: 1
     path: Assets/Scenes/Levels/Moon.unity
-    guid: 0e9a93fed8349c34e8e544012c3a0620
+    guid: 06403724ef0e3d84bbcc3d2180aeff13
   - enabled: 1
     path: Assets/Scenes/Levels/Outback.unity
-    guid: 52912098ee3fc47479edf7773f90e3a7
+    guid: 8f4a8bcf8c9373345a1b30b65bcbb8ec
   - enabled: 1
     path: Assets/Scenes/Levels/Ruins.unity
-    guid: 3eb3c9b8376604c49abadc938f7cf5bc
+    guid: 2c7569aae13847047a67152d50fea0de
   - enabled: 1
     path: Assets/Scenes/Levels/Stadium.unity
-    guid: 6423c26e3d7092c4689aca5048d54dae
+    guid: 5884ace10351bf944b970aa81ccc2cb2
   - enabled: 1
     path: Assets/Scenes/Levels/Steakhouse.unity
-    guid: 4fe3843d630c6cf42bf2f72296cc70f7
+    guid: 72f78ca8b32045647b891a8bc7f270d6
   - enabled: 1
     path: Assets/Scenes/Levels/BoxingRing.unity
     guid: 4c92040a91c6f554ab447d98478ee429
   - enabled: 1
     path: Assets/Scenes/Levels/Antartica.unity
-    guid: d6adf5e72123bf1408aae5e2b8e84e25
+    guid: 5e8c823577c1fff4fa7c0086611cfa3e
   - enabled: 1
     path: Assets/Scenes/Levels/Bridge.unity
     guid: a3b51021b3b7b634cbbb18d51afc9097
@@ -68,20 +68,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Win&Lose/P2WinScreen.unity
     guid: 0bcc32187c7dc364880f8c36467194b5
-  - enabled: 1
-    path: Assets/Scenes/SinglePlayer/TinmanFight.unity
-    guid: 2fb41b4a57210b345acfcce5f9b05dd6
-  - enabled: 1
-    path: Assets/Scenes/SinglePlayer/ABSOFight.unity
-    guid: 373992d1067af4741ab60606746a3c14
-  - enabled: 1
-    path: Assets/Scenes/SinglePlayer/Single-TwoPlayer.unity
-    guid: cd38973f7e51a06458f42c259258961b
-  - enabled: 1
-    path: Assets/Scenes/SinglePlayer/CharacterSelectSIngle.unity
-    guid: 65cd378cafdfaff42aea037d52d52a04
-  - enabled: 1
-    path: Assets/Scenes/SinglePlayer/GaminFight.unity
-    guid: adeef4ef9f312db47856eb81fef15281
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 2e0a4d0acfe751b4c84393dc70ff7447, type: 2}
