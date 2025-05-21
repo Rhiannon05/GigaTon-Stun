@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class ChangeScene : MonoBehaviour
 {
+    public GameObject startButton, controlsButton, creditsButton, quitButton;
 
+   
     public void LevelSelect()
     {
         SceneManager.LoadScene("LevelSelect");

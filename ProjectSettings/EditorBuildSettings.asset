@@ -83,4 +83,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SinglePlayer/GaminFight.unity
     guid: adeef4ef9f312db47856eb81fef15281
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 2e0a4d0acfe751b4c84393dc70ff7447, type: 2}
