@@ -1524,54 +1524,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1300583014928836534, guid: 85401ff64ee54a348b681bd202850087, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1989365954298590027, guid: 85401ff64ee54a348b681bd202850087, type: 3}
-      propertyPath: m_Name
-      value: Feather1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3595112911132312491, guid: 85401ff64ee54a348b681bd202850087, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3595112911132312491, guid: 85401ff64ee54a348b681bd202850087, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6515486041876506960, guid: 85401ff64ee54a348b681bd202850087, type: 3}
       propertyPath: m_Name
       value: FEATHERWEIGHTP1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6777848553420623994, guid: 85401ff64ee54a348b681bd202850087, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6777848553420623994, guid: 85401ff64ee54a348b681bd202850087, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7065283255768498884, guid: 85401ff64ee54a348b681bd202850087, type: 3}
-      propertyPath: _health
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8075953741046668236, guid: 85401ff64ee54a348b681bd202850087, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8075953741046668236, guid: 85401ff64ee54a348b681bd202850087, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8522533186210890358, guid: 85401ff64ee54a348b681bd202850087, type: 3}
       propertyPath: _otherPlayer
       value: 
       objectReference: {fileID: 703129654}
-    - target: {fileID: 8522533186210890358, guid: 85401ff64ee54a348b681bd202850087, type: 3}
-      propertyPath: _playerSprite
-      value: 
-      objectReference: {fileID: 1408326964}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1580,11 +1540,6 @@ PrefabInstance:
 --- !u!4 &1408326963 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1127677224005878849, guid: 85401ff64ee54a348b681bd202850087, type: 3}
-  m_PrefabInstance: {fileID: 1408326962}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &1408326964 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 2858375517967657309, guid: 85401ff64ee54a348b681bd202850087, type: 3}
   m_PrefabInstance: {fileID: 1408326962}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1408326965 stripped
@@ -1603,18 +1558,6 @@ PrefabInstance:
     - target: {fileID: 1633981258049326877, guid: d9ef0a2eec0d9cf4fb098264c920ef9d, type: 3}
       propertyPath: m_Name
       value: WERNER2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3085795396286851310, guid: d9ef0a2eec0d9cf4fb098264c920ef9d, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3085795396286851310, guid: d9ef0a2eec0d9cf4fb098264c920ef9d, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4660635619975222474, guid: d9ef0a2eec0d9cf4fb098264c920ef9d, type: 3}
-      propertyPath: fill
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6469199785791101424, guid: d9ef0a2eec0d9cf4fb098264c920ef9d, type: 3}
       propertyPath: _otherPlayer
